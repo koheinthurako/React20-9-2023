@@ -56,4 +56,18 @@ console.log(obj2.arrow());
 // Constructor တွေသည် object တစ်ခုစဆောက်တဲ့အချိန်မှာ ကြားထဲမှာ သူအရင်အလုပ်လုပ်ပြီးမှ လိုအပ်တဲ့ Object ကိုဆောက်ပေးသည်
 
 const fun = new Function("a", "b", "return a + b");
-console.log(fun);
+// a & b က Parameter ကနေ fun(a, b) value တွေအဖြစ်ဝင်သွားပြီး return a + b က logic အနေနဲ့ အလုပ်လုပ်သွားပါတယ်
+console.log(fun(2,3));
+
+console.dir(Function);
+
+
+// REACH မှာအသုံးများတဲ့ function prototype များ 
+// Function.prototype.bind()
+
+const fun2 = new Function("a", "b", "return a + b").bind(null, 2,5);
+/* bind ကို သုံးလျှင် null keyword ကို ထည့်ပေးရပြီး ပုံမှန်ဆို အောက်က console မှာ fun2(2,3) ဆိုပြီး ထည့်ပေးရပေမယ့် bind prototype သည်
+fun2(a, b) နေရာကို bind ထဲက 2, 3 ကို ပေါင်းထည့်ပေးသွားသည့်အတွက် အလုပ်လုပ်သွားပါတယ် */
+
+
+console.log(fun2())
