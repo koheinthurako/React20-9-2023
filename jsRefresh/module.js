@@ -24,6 +24,6 @@ default တုန်းကလို တခြားနာမည်ပေးလ�
 //     mySelf.id2.name, mySelf.id2.age, mySelf.id2.gender);
 
 
-var x = "Hello";
+// var x = "Hello";
 // ဒီလို declare လုပ်ရင် browser console က window ထဲမှာ x က တန်ဖိုးဝင်သွားလိမ့်မယ် ဒါပေမယ့် index.html ထဲက script မှာ module ကို ဖြုတ်ထားမှရမယ်
 // type="module" ကိုမဖြုတ်ပဲ ဒီလိုရေးရင် window.x ထဲမှာ တန်ဖိုးက undefined ဖြစ်နေလိမ့်မယ် module ကို လိုအပ်မှသုံးပါ
