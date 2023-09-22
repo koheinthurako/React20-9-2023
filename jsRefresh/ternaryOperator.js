@@ -1,4 +1,4 @@
-const x = 3;
+// const x = 3;
 
 // Normal Syntax
 // if(x === 3) {
@@ -22,6 +22,6 @@ const x = 3;
 
 // အကယ်၍ အမှန်ချည်းပဲလိုချင်လို့ ရိုးရိုး if else လို JSX မှာ စစ်ချင်တယ်ဆိုရင်တော့
 // One Way Condition or Logical and Syntax ကို သုံးလို့ရတယ်
-x === 2 && console.log("I am 3");
+// x === 2 && console.log("I am 3");
 // ဒီလို logical syntax (&&) ကို သုံးပြီးရေးလိုက်တာက x === 2 က false ဖြစ်သွားတာနဲ့ နောက်က condition(console.log) ကို မစောင့်တော့ပဲ အလုပ်မလုပ်တော့တာပဲဖြစ်တယ်
 
