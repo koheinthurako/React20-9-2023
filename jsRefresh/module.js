@@ -18,7 +18,12 @@ default တုန်းကလို တခြားနာမည်ပေးလ�
 // console.log(mySelf.name, mySelf.age, mySelf.gender, mySelf2.name, mySelf2.age, mySelf2.gender);
 
 // အကုန်လုံး All Accept လုပ်ချင်တယ်ဆိုရင်တော့
-import * as mySelf from "./module2.js";
-console.log(mySelf.default, mySelf.id2);
-console.log(mySelf.default.name, mySelf.default.age, mySelf.default.gender, 
-    mySelf.id2.name, mySelf.id2.age, mySelf.id2.gender);
+// import * as mySelf from "./module2.js";
+// console.log(mySelf.default, mySelf.id2);
+// console.log(mySelf.default.name, mySelf.default.age, mySelf.default.gender, 
+//     mySelf.id2.name, mySelf.id2.age, mySelf.id2.gender);
+
+
+var x = "Hello";
+// ဒီလို declare လုပ်ရင် browser console က window ထဲမှာ x က တန်ဖိုးဝင်သွားလိမ့်မယ် ဒါပေမယ့် index.html ထဲက script မှာ module ကို ဖြုတ်ထားမှရမယ်
+// type="module" ကိုမဖြုတ်ပဲ ဒီလိုရေးရင် window.x ထဲမှာ တန်ဖိုးက undefined ဖြစ်နေလိမ့်မယ် module ကို လိုအပ်မှသုံးပါ
