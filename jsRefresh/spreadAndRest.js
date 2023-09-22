@@ -41,6 +41,14 @@
 
 
 
+
+// Spread & Rest ကွာခြားပုံ
+// Rest က Paramter "()" ကွင်ထဲမှာ သုံးရပြီး တန်ဖိုးက မူရင်းတန်ဖိုးတွေအတိုင်း တစ်ခုချင်းစီထွက်လာတယ်
+// Spread ကတော့ Array အသစ်တစ်ခုအနေနဲ့ ပြန်ထွက်လာတယ်
+
+
+
+
 // Using Default Parameter
 // const test = (x=2, y=3) => {
 //     return x + y;
@@ -48,3 +56,15 @@
 
 // console.log(test());
 // console.log(test(3, 4));
+
+
+
+// Using spread operator with destructuring
+// const data = [1, 2, 3, 4, 5];
+
+// const [one, two, ...array] = data;
+// console.log(one, two, array);
+
+// array[0] = 10;
+// console.log(array);
+// console.log(data);
