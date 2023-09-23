@@ -15,7 +15,7 @@
 */
 
 
-const array = [1, 2, 3, 4, 5];
+// const array = [1, 2, 3, 4, 5];
 
 // Normal for loop
 // for(let i = 0; i <= array.length-1; i++) {
@@ -102,9 +102,15 @@ const array = [1, 2, 3, 4, 5];
 
 // every ကလည်းအကုန် loop ပတ်ပြီး conditional တွေဖြစ်သည် သို့သော် သူသည် array ထဲက တန်ဖိုတွေအားလုံးကိုဆိုလိုသည်
 // condition စစ်တော့ array ထဲက တန်ဖိုးတွေအကုန် 2 ထက်ငယ်တယ်ဆိုလို့ false ပြန်ပေးသည်gi
-const condi = array.every((value,index, array) => {
-    // console.log(value, index, array);
-    return value < 2;
-})
+// const condi = array.every((value,index, array) => {
+//     // console.log(value, index, array);
+//     return value < 2;
+// })
 
-console.log(condi);
+// console.log(condi);
+
+
+
+// includes သည် array ထဲမှာ စစ်ချင်တဲ့ဂဏန်းပါလားဆိုတာကို စစ်ပေးပြီး boolean return ပြန်ပေးတယ်
+// console.log(array.includes(3));
+// console.log(array.includes(12));
