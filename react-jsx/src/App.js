@@ -8,6 +8,9 @@ function App() {
   const textRed = "text-red";
   const textBlue = "text-blue";
 
+  const click = () => console.log("Click");
+  const valueClick = (x, y) => console.log(x, y);
+
   return (
     // element ၁ခုထပ်ပိုပြီး return ပြန်ချင်တဲ့အခါ React ကို import လုပ်ပြီး React.Fragment ကိုသုံး
     // <>
@@ -29,6 +32,18 @@ function App() {
       {
         boolean && <p>I am true</p>
       }
+      {/* event တွေထည့်ခဲ့ရင်တောင် HTML rendering လုပ်တဲ့အခါ ပါသွားမှာမဟုတ်ပါ */}
+      {/* HTML တုန်းကလို onClick မှာ "()" ထည့်လို့မရပါ "click()" ဒီလိုထည့်လိုက်ရင် click event ကို တစ်ခါတည်း involve လုပ်သွားပြီး run သွားမှာပါ */}
+      {/* <button onClick={click}>Click</button>
+      <button onClick={click()}>Auto Click</button> */}
+
+      {/* // parameter passing လုပ်ပြီး တန်ဖိုးပေးချင်တယ်ဆိုရင်တော့ onClick ရှေ့မှာ callBack function ထည့်ပေးရပါမယ် */}
+      {/* <button onClick={() => valueClick("This is paramter passing click")}>Paramter Click</button> */}
+
+      {/* ဒါဆိုရင် bind method ကို သုံးထားတဲ့အတွက်ကြောင့် အပေါ်ကလို callBack function တွေ ထည့်စရာမလိုတော့ပဲ click နှိပ်မှ run မယ်
+      "()" ပါပေမယ့် auto အလုပ်မလုပ်တော့ဘူး */}
+
+      <button onClick={valueClick.bind(null, "Hello World", "Hello Ko Hein")}>Click</button>
     </div>
   );
 }
