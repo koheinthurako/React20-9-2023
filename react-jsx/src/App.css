@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.App .text-red {
+  color: rgb(221, 0, 0);
+}
+
+.App .text-blue {
+  color: rgb(1, 123, 253);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
