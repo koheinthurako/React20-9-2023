@@ -11,6 +11,8 @@ function App() {
   const click = () => console.log("Click");
   const valueClick = (x, y) => console.log(x, y);
 
+  const item = ["This is 1", "This is 2", "This is 3", "This is 4", "This is 5"];
+
   return (
     // element ၁ခုထပ်ပိုပြီး return ပြန်ချင်တဲ့အခါ React ကို import လုပ်ပြီး React.Fragment ကိုသုံး
     // <>
@@ -23,6 +25,7 @@ function App() {
     // <div></div>
     // </>
 
+    // JSX ဆိုတာ javascript  ထဲမှာ HTML, CSS တွေပေါင်းရေးတာကိုဆိုလိုတယ်
     // JSX ထဲမှာ javascript expression များညှပ်ရေးမယ်ဆို "{}" ထဲမှာရေးရတယ်
     <div className="App">
       <h1 className={boolean ? textRed : textBlue}>Hello World {5+5}</h1>
@@ -42,8 +45,20 @@ function App() {
 
       {/* ဒါဆိုရင် bind method ကို သုံးထားတဲ့အတွက်ကြောင့် အပေါ်ကလို callBack function တွေ ထည့်စရာမလိုတော့ပဲ click နှိပ်မှ run မယ်
       "()" ပါပေမယ့် auto အလုပ်မလုပ်တော့ဘူး */}
-
       <button onClick={valueClick.bind(null, "Hello World", "Hello Ko Hein")}>Click</button>
+
+      <div>
+
+        {/* code တွေ အများကြီးရေးနေစရာမလိုအောင် ရေးချင်တဲ့ data တွေကို array ထဲထည့် loop ပတ်ပြီး rendering လုပ်နိုင်တယ်
+        သို့သော် react သည် code တွေကို react-dom မှနေတစ်ဆင့် unique key တွေကို လှမ်းဖမ်းပြီး render လုပ်တဲ့အတွက်
+        key တွေမပေးဘဲထားရင် Warning: Each child in a list should have a unique “key” prop. error တက်မယ်
+        item ထဲက data တွေကို ဖျက်တာပြင်တာ စသဖြင့် ဘယ် item က ဘယ်လိုအလုပ်လုပ်သွားလဲဆိုတာကိုသိရန် data တစ်ခုချင်းစီကိုသိနိုင်ဖို့လည်း
+        မတူညီတဲ့ unique keys တွေပေးဖို့လိုတယ်  */}
+        {
+          item.map(i => <p>{i}</p>)
+        }
+
+      </div>
     </div>
   );
 }
