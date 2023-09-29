@@ -1,5 +1,6 @@
 import './App.css';
 import {Fragment} from "react";
+import Test from './components/Test';
 
 function App() {
   const name = "Ko Hein";
@@ -64,6 +65,7 @@ function App() {
 
       {/* အောက်က function Button() ကို JSX ထဲမှာထည့်ချင်ရင် ရိုးရိုး HTML ရေးသလို အောင်ကလိုရေးလို့ရတယ် ဒါမှသာ document ထဲရောက်ပြီး အလုပ်လုပ်မယ် */}
       <Button/>
+      <Test/>
     </div>
   );
 }
@@ -72,8 +74,13 @@ export default App;
 
 // react တွင် function တို့သည် components တစ်ခုပဲဖြစ်တယ် components တွေတွင် return မဖြစ်မနေပြန်ရမယ်
 // အောက်က function ကို document ထဲမှာ အလုပ်လုပ်စေချင်ရင် App level component ထဲမှာ မဖြစ်မနေထည့်ပေးရမယ်
+// သတိထားစရာက Function တစ်ခုကို React Component အနေနဲ့ရေးမယ်ဆိုရင် Uppercase Name ပေးရမယ် lowercase သည် jsx ထဲမှာအလုပ်မလုပ်ပါ
 function Button() {
   return <div>
     <p>I am Button</p>
   </div>
 }
+
+// သို့သော် တကယ်တမ်းရေးတဲ့အခါ code တွေ ပွထမနေအောင် components file တွေခွဲပြီးရေးသင့်ပါတယ်
+// file တွေခွဲရေးရင် အလုပ်လုပ်အောင် App level component တွင်ပြန်ခေါ်သုံးပေးရမယ်
+// ပြန်ခေါ်တဲ့အခါ module concept ဖြစ်တဲ့ export/import တွေလုပ်ရမယ်
