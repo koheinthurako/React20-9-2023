@@ -15,6 +15,7 @@ function App() {
 
   return (
     // element ၁ခုထပ်ပိုပြီး return ပြန်ချင်တဲ့အခါ React ကို import လုပ်ပြီး React.Fragment ကိုသုံး
+    // Fragment shorten => <></>
     // <>
     // <div className="App">
     //   <h1>Hello World</h1>
@@ -50,17 +51,29 @@ function App() {
       <div>
 
         {/* code တွေ အများကြီးရေးနေစရာမလိုအောင် ရေးချင်တဲ့ data တွေကို array ထဲထည့် loop ပတ်ပြီး rendering လုပ်နိုင်တယ်
-        သို့သော် react သည် code တွေကို react-dom မှနေတစ်ဆင့် unique key တွေကို လှမ်းဖမ်းပြီး render လုပ်တဲ့အတွက်
+        သို့သော် react သည် code တွေကို react-dom မှနေတစ်ဆင့် unique key တွေကို လှမ်းဖမ်းပြီး render လုပ်တဲ့အတွက် loop ပတ်တဲ့အခါ
         key တွေမပေးဘဲထားရင် Warning: Each child in a list should have a unique “key” prop. error တက်မယ်
         item ထဲက data တွေကို ဖျက်တာပြင်တာ စသဖြင့် ဘယ် item က ဘယ်လိုအလုပ်လုပ်သွားလဲဆိုတာကိုသိရန် data တစ်ခုချင်းစီကိုသိနိုင်ဖို့လည်း
-        မတူညီတဲ့ unique keys တွေပေးဖို့လိုတယ်  */}
+        မတူညီတဲ့ unique keys တွေပေးဖို့လိုတယ် ဒါကြောင့် index လေးတွေကို အောက်ကနေထည့်ပေးလို့ရတယ် */}
         {
-          item.map(i => <p>{i}</p>)
+          // သို့သော် index ကို key အနေနဲ့ထည့်ခြင်းသည် မကောင်းပါ အပြောင်းအလဲမရှိတဲ့ static data နေရာမှာ အဆင်ပြေနိုင်ပေမယ့်
+          // အပြောင်းအလဲရှိတဲ့ dynamic data တွေမှာဆို index သည် unique key အနေနဲ့ save မဖြစ်ပါ
+          item.map((i, index) => <p key={index}>{i}</p>)
         }
-
       </div>
+
+      {/* အောက်က function Button() ကို JSX ထဲမှာထည့်ချင်ရင် ရိုးရိုး HTML ရေးသလို အောင်ကလိုရေးလို့ရတယ် ဒါမှသာ document ထဲရောက်ပြီး အလုပ်လုပ်မယ် */}
+      <Button/>
     </div>
   );
 }
 
 export default App;
+
+// react တွင် function တို့သည် components တစ်ခုပဲဖြစ်တယ် components တွေတွင် return မဖြစ်မနေပြန်ရမယ်
+// အောက်က function ကို document ထဲမှာ အလုပ်လုပ်စေချင်ရင် App level component ထဲမှာ မဖြစ်မနေထည့်ပေးရမယ်
+function Button() {
+  return <div>
+    <p>I am Button</p>
+  </div>
+}
