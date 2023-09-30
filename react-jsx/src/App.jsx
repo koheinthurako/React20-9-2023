@@ -1,3 +1,5 @@
+import One from "./components/One";
+
 const App = () => {
   <div>
     <h1>Hello World</h1>
