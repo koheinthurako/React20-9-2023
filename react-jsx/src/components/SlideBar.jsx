@@ -1,6 +1,8 @@
 const SlideBar = () => {
   return (
-    <div>SlideBar</div>
+    <div className="slideBar">
+        <h3>This is slidebar</h3>
+    </div>
   )
 }
 
