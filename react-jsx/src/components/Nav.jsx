@@ -1,14 +1,25 @@
 const Nav = () => {
     const menu = ["Home", "Contact", "About", "Service"];
+
+    const style = {
+        headerStyle: {
+            color: "#000",
+            backgroundColor: "#fff"
+        },
+        menuStyle: {
+            color: "#000",
+            backgroundColor: "#fff"
+        }
+    }
     
   return (
     <div className="navContainer">
         <div>
-            <h3>DC Creation</h3>
+            <h3 style={style.headerStyle}>DC Creation</h3>
         </div>
         <ul className="menuContainer">
             {
-                menu.map((i, index) => <li key={index}>{i}</li>)
+                menu.map((i, index) => <li style={style.menuStyle} key={index}>{i}</li>)
             }
         </ul>
     </div>
