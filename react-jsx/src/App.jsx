@@ -1,17 +1,9 @@
-import "../src/App.css";
-import One from "./components/One";
-import Two from "./components/Two";
-import Three from "./components/Three";
+import React from 'react'
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-      <One/>
-      <Two/>
-      <Three/>
-    </div>
-  );
-};
+    <div>App</div>
+  )
+}
 
-export default App;
+export default App
