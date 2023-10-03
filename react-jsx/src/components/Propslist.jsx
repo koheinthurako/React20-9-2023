@@ -1,16 +1,10 @@
-const Propslist = () => {
-    const style = {
-        menuStyle: {
-            color: "#000",
-            backgroundColor: "#fff",
-            textAlign: "center",
-            marginBottom: "25px",
-            paddingBottom: "25px"
-        }
-    }
+import "./Propslist.css"
+
+const Propslist = (props) => {
+    console.log(props);
   return (
-    <div>
-        <h3 style={style.menuStyle}>This is Propslist</h3>
+    <div className="listContainer">
+        <h3>This is Propslist named "{props.name}"</h3>
     </div>
   )
 }
