@@ -9,6 +9,7 @@ const App = () => {
 
   const data = ["Ko Hein", "Thet Zaw Hein", "Captain"];
 
+
   return (
     <div className="container">
       <Nav/>
@@ -23,9 +24,10 @@ const App = () => {
         ထဲက arrow function က အလုပ်လုပ်သွားပြီး props ဖြစ်တဲ့ name ကို ဟိုဘက်က function parameter ထဲ passing
         ပေးလိုက်ပြီး object တွေလို data array ထဲက တန်ဖိုးတွေကို ပြန်ခေါ်သုံးလို့ရသွားတယ်
       */}
-      <Propslist name={data[0]}/>
-      <Propslist name={data[1]}/>
-      <Propslist name={data[2]}/>
+      <Propslist name={data[0]} age={24}/>
+      <Propslist name={data[1]} age={24}/>
+      <Propslist name={data[2]} age={24}/>
+
       <Footer/>
 
     </div>

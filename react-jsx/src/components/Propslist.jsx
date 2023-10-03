@@ -1,10 +1,9 @@
 import "./Propslist.css"
 
-const Propslist = (props) => {
-    console.log(props);
+const Propslist = ({name, age}) => {
   return (
     <div className="listContainer">
-        <h3>This is Propslist named "{props.name}"</h3>
+        <h3>This is Propslist named "{name}" and age is {age}</h3>
     </div>
   )
 }
