@@ -4,10 +4,21 @@ import Nav from "./components/Nav";
 import SlideBar from "./components/SlideBar";
 import "../src/App.css";
 import Propslist from "./components/Propslist";
+import { useRef } from "react";
 
 const App = () => {
 
   const data = ["Ko Hein", "Thet Zaw Hein", "Captain"];
+
+  // Using useRef hook
+  const inputRef = useRef();
+
+  // useRef ကို ref ဆိုသည့် props ကို အသုံးပြု၍ခေါ်ရပြီး useRef hook ကိုအသုံးပြုလိုက်ခြင်းသည် document.getElementById DOM နည်းတူဆင်တူသည်
+  // useRef ထဲတွင် current ဆိုသည့် react library မှ support ပေးသော box တစ်ခုဝင်သွားပြီး ထို box ထဲတွင် DOM method များလည်းပါဝင်သည်
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log(inputRef);
+  }
 
   return (
     <div className="container">
@@ -27,6 +38,16 @@ const App = () => {
       <Propslist name={data[0]} age={24} isDone/>
       <Propslist name={data[1]} age={24} isDone={false}/>
       <Propslist name={data[2]} age={24} isDone/>
+
+
+      {/* 
+        START HOOKS
+        Using useRef hook
+      */}
+      <form className="formContainer">
+        <input ref={inputRef} type="text" placeholder="Write something..."/>
+        <button onClick={handleClick}>Add</button>
+      </form>
 
       <Footer/>
 
