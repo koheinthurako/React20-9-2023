@@ -13,12 +13,17 @@ const App = () => {
   // Using useRef hook
   const inputRef = useRef();
 
-  // useRef ကို ref ဆိုသည့် props ကို အသုံးပြု၍ခေါ်ရပြီး useRef hook ကိုအသုံးပြုလိုက်ခြင်းသည် document.getElementById DOM နည်းတူဆင်တူသည်
-  // useRef ထဲတွင် current ဆိုသည့် react library မှ support ပေးသော box တစ်ခုဝင်သွားပြီး ထို box ထဲတွင် DOM method များလည်းပါဝင်သည်
+  // useRef ကို input ထဲတွင် ref ဆိုသည့် props ကို အသုံးပြု၍ခေါ်ရပြီး useRef hook ကိုအသုံးပြုလိုက်ခြင်းသည် document.getElementById DOM နည်းတူဆင်တူသည်
+  // inputRef ထဲတွင် current ဆိုသည့် react library မှ support ပေးသော box တစ်ခုဝင်သွားပြီး ထို box ထဲတွင် DOM method များလည်းပါဝင်သည်
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(inputRef);
+    // console.log(inputRef);
+    // inputRef.current.focus();
+    // inputRef.current.style.borderColor = "red";
+    console.log(inputRef.current.value)
   }
+
+  // const showText = () => console.log(inputRef.current.innerText = "Hello World");
 
   return (
     <div className="container">
@@ -45,6 +50,10 @@ const App = () => {
         Using useRef hook
       */}
       <form className="formContainer">
+        {/* 
+          အပေါ်က inputRef ရဲ့ DOM properties တွေကို အောက်က input tag ထဲသို့ လက်ဆင့်ကမ်းပေးလိုက်ခြင်းဖြစ်ပြီး
+          DOM Property တွေကို input box မှလည်း ခေါ်သုံးလို့ရသွားသည် 
+          */}
         <input ref={inputRef} type="text" placeholder="Write something..."/>
         <button onClick={handleClick}>Add</button>
       </form>
