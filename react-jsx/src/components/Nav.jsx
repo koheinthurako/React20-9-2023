@@ -1,6 +1,7 @@
 const Nav = () => {
     const menu = ["Home", "Contact", "About", "Service"];
 
+    // Inline style css
     const style = {
         headerStyle: {
             color: "#000",
