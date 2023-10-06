@@ -1,6 +1,6 @@
 import "./Propslist.css"
 
-const Propslist = ({name, age, isDone}) => {
+const Propslist = ({data, isDone}) => {
 
     // const style = {
     //     bgStyle: {
@@ -18,7 +18,9 @@ const Propslist = ({name, age, isDone}) => {
     // ဒါက class binding ဖြစ်ပြီး အပေါ်က style variable ထဲကမဟုတ်ပဲ Propslist.css ထဲက style class ကိုယူသုံးထားတယ်
     // အောက်က className ထဲမှာ template literal ကိုအသုံးပြုထားပြီး js တုန်းကလို တန်းရေးလို့မရပဲ {``} ထဲမှာပဲ ရေးလို့ရတယ်
     <div className={`listContainer ${isDone && "done"}`}>
-        <h3>This is Propslist named "{name}" and age is {age}.</h3>
+        {/* <h3>This is Propslist named "{name}" and age is {age}.</h3> */}
+        <input type="checkbox" />
+        <p>{data}</p>
     </div>
   )
 }

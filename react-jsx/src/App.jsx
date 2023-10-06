@@ -8,7 +8,7 @@ import { useRef, useState } from "react";
 
 const App = () => {
 
-  const data = ["Ko Hein", "Thet Zaw Hein", "Captain"];
+  // const data = ["Ko Hein", "Thet Zaw Hein", "Captain"];
 
   // Hook ဆိုတာဘာလဲ Hook ဆိုတာ DOM Access လုပ်နိုင်ပြီး vanilla တုန်းကလို program တစ်ခုရေးဖို့ code တွေအများကြီးရေးစရာမလိုတော့ပဲ
   // react မှ support လုပ်ထားတဲ့ အရာတွေဖြစ်ပြီး ထိုအရာတွေကို သိတာနဲ့ program အလွယ်တကူရေးနိုင်တယ်
@@ -27,13 +27,20 @@ const App = () => {
     setInitialState(initialState + 1);
   }
 
-  const [initialState, setInitialState] = useState(0);
+  // const [initialState, setInitialState] = useState(0);
   // const [initialState, setInitialState] = useState("Hello");
   // initialState က ထည့်လိုက်တဲ့တန်ဖိုးဖြစ်ပြီး setInitialState ကတော့ တန်ဖိုးတွေကို ပြန်လည်ပြင်ဆင်မယ့် method ဖြစ်တယ်
   // useState ထဲက "Hello" သည် initialState ဖြစ်သွားပြီးအောက်က return ထဲမှာ ထည့်ရေးလိုက်တာနဲ့ rendering လုပ်သွားသည်
   // setInitialState ကတော့ ပြန်ပြင်တာ အပေါ်က hancleClick မှာ setInitialState ကို ပြန်ပြင်လိုက်တာနဲ့ တန်ဖိုးကိုတစ်ခါတည်းပြောင်းပြီး rendering လုပ်သွားသည်
 
   // const showText = () => console.log(inputRef.current.innerText = "Hello World");
+
+  const [initialState, setInitialState] = useState([
+    {id:1, name: "Ko Hein", gender: "Male"},
+    {id:2, name: "Captain", gender: "Male"},
+    {id:3, name: "Thet Zaw hein", gender: "Male"}
+  ]);
+  
 
   return (
     <div className="container">
@@ -50,9 +57,9 @@ const App = () => {
         ထဲက arrow function က အလုပ်လုပ်သွားပြီး props ဖြစ်တဲ့ name ကို ဟိုဘက်က function parameter ထဲ passing
         ပေးလိုက်ပြီး object တွေလို data array ထဲက တန်ဖိုးတွေကို ပြန်ခေါ်သုံးလို့ရသွားတယ်
       */}
-      <Propslist name={data[0]} age={24} isDone/>
+      {/* <Propslist name={data[0]} age={24} isDone/>
       <Propslist name={data[1]} age={24} isDone={false}/>
-      <Propslist name={data[2]} age={24} isDone/>
+      <Propslist name={data[2]} age={24} isDone/> */}
 
 
       {/* 
@@ -67,9 +74,10 @@ const App = () => {
         <input ref={inputRef} type="text" placeholder="Write something..."/>
         <button onClick={handleClick}>Add</button>
       </form>
+      {initialState.map((i, index) => <Propslist key={i.id} data={i.name}/>)}
 
       {/* Using useState */}
-      <p onClick={handleClick}>{initialState}</p>
+      {/* <p onClick={handleClick}>{initialState}</p> */}
 
       <Footer/>
 
