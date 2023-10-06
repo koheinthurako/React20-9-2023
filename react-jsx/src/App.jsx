@@ -10,6 +10,9 @@ const App = () => {
 
   const data = ["Ko Hein", "Thet Zaw Hein", "Captain"];
 
+  // Hook ဆိုတာဘာလဲ Hook ဆိုတာ DOM Access လုပ်နိုင်ပြီး vanilla တုန်းကလို program တစ်ခုရေးဖို့ code တွေအများကြီးရေးစရာမလိုတော့ပဲ
+  // react မှ support လုပ်ထားတဲ့ အရာတွေဖြစ်ပြီး ထိုအရာတွေကို သိတာနဲ့ program အလွယ်တကူရေးနိုင်တယ်
+
   // Using useRef hook
   const inputRef = useRef();
 
@@ -20,12 +23,15 @@ const App = () => {
     // console.log(inputRef);
     // inputRef.current.focus();
     // inputRef.current.style.borderColor = "red";
-    console.log(inputRef.current.value)
+    // console.log(inputRef.current.value);
+    setInitialState(initialState + 1);
   }
 
-
-  const [initialState, setInitialState] = useState();
+  const [initialState, setInitialState] = useState(0);
+  // const [initialState, setInitialState] = useState("Hello");
   // initialState က ထည့်လိုက်တဲ့တန်ဖိုးဖြစ်ပြီး setInitialState ကတော့ တန်ဖိုးတွေကို ပြန်လည်ပြင်ဆင်မယ့် method ဖြစ်တယ်
+  // useState ထဲက "Hello" သည် initialState ဖြစ်သွားပြီးအောက်က return ထဲမှာ ထည့်ရေးလိုက်တာနဲ့ rendering လုပ်သွားသည်
+  // setInitialState ကတော့ ပြန်ပြင်တာ အပေါ်က hancleClick မှာ setInitialState ကို ပြန်ပြင်လိုက်တာနဲ့ တန်ဖိုးကိုတစ်ခါတည်းပြောင်းပြီး rendering လုပ်သွားသည်
 
   // const showText = () => console.log(inputRef.current.innerText = "Hello World");
 
@@ -63,7 +69,7 @@ const App = () => {
       </form>
 
       {/* Using useState */}
-
+      <p onClick={handleClick}>{initialState}</p>
 
       <Footer/>
 
