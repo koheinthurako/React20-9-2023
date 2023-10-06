@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import SlideBar from "./components/SlideBar";
 import "../src/App.css";
 import Propslist from "./components/Propslist";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const App = () => {
 
@@ -22,6 +22,10 @@ const App = () => {
     // inputRef.current.style.borderColor = "red";
     console.log(inputRef.current.value)
   }
+
+
+  const [initialState, setInitialState] = useState();
+  // initialState က ထည့်လိုက်တဲ့တန်ဖိုးဖြစ်ပြီး setInitialState ကတော့ တန်ဖိုးတွေကို ပြန်လည်ပြင်ဆင်မယ့် method ဖြစ်တယ်
 
   // const showText = () => console.log(inputRef.current.innerText = "Hello World");
 
@@ -57,6 +61,9 @@ const App = () => {
         <input ref={inputRef} type="text" placeholder="Write something..."/>
         <button onClick={handleClick}>Add</button>
       </form>
+
+      {/* Using useState */}
+
 
       <Footer/>
 
