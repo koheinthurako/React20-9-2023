@@ -9,6 +9,10 @@
     margin-bottom: 10px;
 }
 
+.listContainer input {
+    margin-right: 10px;
+}
+
 .done {
     background-color: black;
     text-decoration: line-through;

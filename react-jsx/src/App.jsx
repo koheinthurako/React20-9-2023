@@ -24,7 +24,12 @@ const App = () => {
     // inputRef.current.focus();
     // inputRef.current.style.borderColor = "red";
     // console.log(inputRef.current.value);
-    setInitialState(initialState + 1);
+    const data = {};
+    data.name = inputRef.current.value;
+    data.isDone = false;
+    data.id = Math.random(Date.now()) * 10000000000; // set unique key
+
+    setInitialState([...initialState, data]);
   }
 
   // const [initialState, setInitialState] = useState(0);
@@ -74,10 +79,10 @@ const App = () => {
         <input ref={inputRef} type="text" placeholder="Write something..."/>
         <button onClick={handleClick}>Add</button>
       </form>
-      {initialState.map((i, index) => <Propslist key={i.id} data={i.name}/>)}
 
       {/* Using useState */}
       {/* <p onClick={handleClick}>{initialState}</p> */}
+      {initialState.map((i, index) => <Propslist key={i.id} data={i.name}/>)}
 
       <Footer/>
 
