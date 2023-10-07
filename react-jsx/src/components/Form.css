@@ -1,0 +1,10 @@
+.formContainer {
+    margin: 20px 20px;
+    display: flex;
+    background-color: orangered;
+  }
+  
+  .formContainer > input {
+    flex: 1;
+    padding: 7px;
+  }
