@@ -8,6 +8,7 @@ const Form = ({onSubmit}) => {
     const handleClick = (e) => {
         e.preventDefault();
         onSubmit(inputRef.current.value);
+        inputRef.current.value = null;
     };
 
   return (

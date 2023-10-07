@@ -25,11 +25,10 @@ const App = () => {
      // console.log(inputRef.current.value);
      const data = {};
      data.name = name;
-    //  data.isDone = false;
-    //  data.id = Math.random(Date.now()) * 10000000000; // set unique key
+     data.isDone = false;
+     data.id = Math.random(Date.now()) * 10000000000; // set unique key
  
-    //  setInitialState([...initialState, data]);
-    //  inputRef.current.value = null;
+     setInitialState([...initialState, data]);
    }
  
    // const [initialState, setInitialState] = useState(0);
