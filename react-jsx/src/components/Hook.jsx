@@ -1,1 +1,0 @@
-// hook သည် functional component အတွက် မရှိမဖြစ်လိုအပ်သည်
