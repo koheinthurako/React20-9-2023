@@ -30,6 +30,7 @@ const App = () => {
     data.id = Math.random(Date.now()) * 10000000000; // set unique key
 
     setInitialState([...initialState, data]);
+    inputRef.current.value = null;
   }
 
   // const [initialState, setInitialState] = useState(0);
@@ -50,10 +51,10 @@ const App = () => {
   return (
     <div className="container">
       <Nav/>
-      <div className="midContainer">
+      {/* <div className="midContainer">
         <SlideBar/>
         <Main/>
-      </div>
+      </div> */}
       {/* 
         Props အကြောင်းအစ 
         အပေါ်က data array ထဲက data တွေကို အောက်က propslist ထဲ data တွေ လှမ်းပေးချင်ရင် props အနေနဲ့ပေးလို့ရတယ်
@@ -82,7 +83,9 @@ const App = () => {
 
       {/* Using useState */}
       {/* <p onClick={handleClick}>{initialState}</p> */}
-      {initialState.map((i, index) => <Propslist key={i.id} data={i.name}/>)}
+      <div className="listMainBox">
+        {initialState.map((i) => <Propslist key={i.id} data={i.name}/>)}
+      </div>
 
       <Footer/>
 
