@@ -1,6 +1,6 @@
 import "./Propslist.css"
 
-const Propslist = ({data, isDone, onChecked, id}) => {
+const Propslist = ({data, isDone, onChecked, id, onDelete}) => {
 
     // const style = {
     //     bgStyle: {
@@ -12,6 +12,10 @@ const Propslist = ({data, isDone, onChecked, id}) => {
     const handleChange = () => {
       onChecked(id);
     };
+
+    const handleDelete = () => {
+      onDelete(id);
+    }
 
   return (
     // ဒါက style binding ဖြစ်ပြီး အဲ့ဒါကိုမသုံးပဲ class binding ကိုလည်းသုံးလို့ရတယ်
@@ -31,7 +35,7 @@ const Propslist = ({data, isDone, onChecked, id}) => {
        </div>
        <div className="btnContainer">
         <button>Edit</button>
-        <button>Delete</button>
+        <button onClick={handleDelete}>Delete</button>
        </div>
     </div>
   )
