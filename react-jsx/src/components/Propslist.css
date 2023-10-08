@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 21px;
+    justify-content: space-between;
 }
 
 .listContainer input {
@@ -20,4 +21,16 @@
 .done {
     background-color: black;
     text-decoration: line-through;
+}
+
+.listContainer .textContainer {
+    margin-left: 15px;
+    display: flex;
+}
+
+.listContainer .btnContainer > button {
+    width: 70px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 15px;
 }

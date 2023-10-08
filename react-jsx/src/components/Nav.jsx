@@ -4,19 +4,19 @@ const Nav = () => {
     // Inline style css
     const style = {
         headerStyle: {
-            color: "#000",
-            backgroundColor: "#fff"
+            color: "#fff",
+            // backgroundColor: "#fff"
         },
         menuStyle: {
-            color: "#000",
-            backgroundColor: "#fff"
+            color: "#fff",
+            // backgroundColor: "#fff"
         }
     }
     
   return (
     <div className="navContainer">
         <div>
-            <h3 style={style.headerStyle}>DC Creation</h3>
+            <h3 style={style.headerStyle}>Add List Test</h3>
         </div>
         <ul className="menuContainer">
             {
