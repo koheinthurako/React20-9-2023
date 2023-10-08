@@ -1,6 +1,6 @@
 import "./Propslist.css"
 
-const Propslist = ({data, isDone}) => {
+const Propslist = ({data, isDone, onChecked, id}) => {
 
     // const style = {
     //     bgStyle: {
@@ -9,7 +9,9 @@ const Propslist = ({data, isDone}) => {
     //     }
     // }
 
-    const handleChange = () => {};
+    const handleChange = () => {
+      onChecked(id);
+    };
 
   return (
     // ဒါက style binding ဖြစ်ပြီး အဲ့ဒါကိုမသုံးပဲ class binding ကိုလည်းသုံးလို့ရတယ်

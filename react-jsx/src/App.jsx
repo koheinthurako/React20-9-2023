@@ -45,6 +45,17 @@ const App = () => {
      {id:3, name: "Thet Zaw hein", isDone: false}
    ]);
 
+   const handleCheck = (id) => {
+      console.log(id);
+      setInitialState(initialState.map(i => {
+        if(i.id === id) {
+          return {name:i.name, isDone:!i.isDone, id:i.id};
+        } else {
+          return i;
+        }
+      }));
+   }
+
   return (
     <div className="container">
       <Nav/>
@@ -82,7 +93,8 @@ const App = () => {
 
       {/* Using useState */}
       <div className="listMainBox">
-        {initialState.map((i) => <Propslist key={i.id} data={i.name} isDone={i.isDone}/>)}
+        {initialState.map((i) => <Propslist key={i.id} 
+        data={i.name} id={i.id} isDone={i.isDone} onChecked={handleCheck}/>)}
       </div>
 
       <Footer/>
