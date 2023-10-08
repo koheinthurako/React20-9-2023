@@ -60,7 +60,7 @@ const App = () => {
    }
 
    const handleDelete = (id) => {
-    setInitialState(initialState.filter(i => i.id !== id))
+    setInitialState(initialState.filter(i => i.id !== id));
   }
 
   return (
