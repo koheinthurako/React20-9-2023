@@ -40,9 +40,9 @@ const App = () => {
    // const showText = () => console.log(inputRef.current.innerText = "Hello World");
  
    const [initialState, setInitialState] = useState([
-     {id:1, name: "Ko Hein", gender: "Male"},
-     {id:2, name: "Captain", gender: "Male"},
-     {id:3, name: "Thet Zaw hein", gender: "Male"}
+     {id:1, name: "Ko Hein", isDone: false},
+     {id:2, name: "Captain", isDone: false},
+     {id:3, name: "Thet Zaw hein", isDone: false}
    ]);
 
   return (
@@ -82,7 +82,7 @@ const App = () => {
 
       {/* Using useState */}
       <div className="listMainBox">
-        {initialState.map((i) => <Propslist key={i.id} data={i.name}/>)}
+        {initialState.map((i) => <Propslist key={i.id} data={i.name} isDone={i.isDone}/>)}
       </div>
 
       <Footer/>
