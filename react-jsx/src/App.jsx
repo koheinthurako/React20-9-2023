@@ -63,8 +63,14 @@ const App = () => {
     setInitialState(initialState.filter(i => i.id !== id));
   }
 
-  const handleEdit = () => {
-    console.log("Edit");
+  const handleEdit = (id) => {
+    const oldData = initialState.find(i => i.id === id);
+    const value = prompt("Enter new value", oldData.name);
+    if(value) {
+      setInitialState(initialState.map(i => i.id === id ? {name:value, isDone:false, id:i.id} : i));
+    }
+    // console.log(value);
+    // console.log(id);
   }
 
   return (
@@ -105,7 +111,7 @@ const App = () => {
       {/* Using useState */}
       <div className="listMainBox">
         {initialState.map((i) => <Propslist key={i.id} 
-        data={i.name} onDelete={handleDelete} onEdit={handleEdit} id={i.id} isDone={i.isDone} onChecked={handleCheck}/>)};
+        data={i.name} onDelete={handleDelete} onEdit={handleEdit} id={i.id} isDone={i.isDone} onChecked={handleCheck}/>)}
       </div>
 
       {/* <Footer/> */}

@@ -18,7 +18,7 @@ const Propslist = ({data, isDone, onChecked, id, onDelete, onEdit}) => {
     }
 
     const handleEdit = () => {
-      onEdit();
+      onEdit(id);
     }
 
   return (
