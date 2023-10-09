@@ -1,4 +1,6 @@
-import "./Propslist.css"
+import "./Propslist.css";
+import {BsTrash} from "react-icons/bs";
+import {BiEdit} from "react-icons/bi"
 
 const Propslist = ({data, isDone, onChecked, id, onDelete, onEdit}) => {
 
@@ -38,8 +40,8 @@ const Propslist = ({data, isDone, onChecked, id, onDelete, onEdit}) => {
           <p>{data}</p>
        </div>
        <div className="btnContainer">
-        <button onClick={handleEdit}>Edit</button>
-        <button onClick={handleDelete}>Delete</button>
+        <button onClick={handleEdit}><BiEdit/></button>
+        <button onClick={handleDelete}><BsTrash/></button>
        </div>
     </div>
   )
