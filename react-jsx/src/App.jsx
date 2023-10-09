@@ -6,6 +6,7 @@ import "../src/App.css";
 import Propslist from "./components/Propslist";
 import { useRef, useState } from "react";
 import Form from "./components/Form";
+import {v4 as id} from "uuid";
 
 const App = () => {
 
@@ -26,7 +27,7 @@ const App = () => {
      const data = {};
      data.name = name;
      data.isDone = false;
-     data.id = Math.random(Date.now()) * 10000000000; // set unique key
+     data.id = id(); // set unique key
  
      setInitialState([...initialState, data]);
    }
@@ -65,8 +66,6 @@ const App = () => {
     if(value) {
       setInitialState(initialState.map(i => i.id === id ? {name:value, isDone:false, id:i.id} : i));
     }
-    // console.log(value);
-    // console.log(id);
   }
 
   return (
