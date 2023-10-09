@@ -39,11 +39,7 @@ const App = () => {
  
    // const showText = () => console.log(inputRef.current.innerText = "Hello World");
  
-   const [initialState, setInitialState] = useState([
-     {id:1, name: "Ko Hein", isDone: false},
-     {id:2, name: "Captain", isDone: false},
-     {id:3, name: "Thet Zaw hein", isDone: false}
-   ]);
+   const [initialState, setInitialState] = useState([]);
 
    const handleCheck = (id) => {
       console.log(id);
