@@ -1,6 +1,6 @@
 import "./Propslist.css"
 
-const Propslist = ({data, isDone, onChecked, id, onDelete}) => {
+const Propslist = ({data, isDone, onChecked, id, onDelete, onEdit}) => {
 
     // const style = {
     //     bgStyle: {
@@ -15,6 +15,10 @@ const Propslist = ({data, isDone, onChecked, id, onDelete}) => {
 
     const handleDelete = () => {
       onDelete(id);
+    }
+
+    const handleEdit = () => {
+      onEdit();
     }
 
   return (
@@ -34,7 +38,7 @@ const Propslist = ({data, isDone, onChecked, id, onDelete}) => {
           <p>{data}</p>
        </div>
        <div className="btnContainer">
-        <button>Edit</button>
+        <button onClick={handleEdit}>Edit</button>
         <button onClick={handleDelete}>Delete</button>
        </div>
     </div>

@@ -63,6 +63,10 @@ const App = () => {
     setInitialState(initialState.filter(i => i.id !== id));
   }
 
+  const handleEdit = () => {
+    console.log("Edit");
+  }
+
   return (
     <div className="container">
       <Nav/>
@@ -101,7 +105,7 @@ const App = () => {
       {/* Using useState */}
       <div className="listMainBox">
         {initialState.map((i) => <Propslist key={i.id} 
-        data={i.name} onDelete={handleDelete} id={i.id} isDone={i.isDone} onChecked={handleCheck}/>)};
+        data={i.name} onDelete={handleDelete} onEdit={handleEdit} id={i.id} isDone={i.isDone} onChecked={handleCheck}/>)};
       </div>
 
       {/* <Footer/> */}
