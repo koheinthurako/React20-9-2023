@@ -6,9 +6,9 @@ import "./App.css";
 const App = () => {
   return (
     <div>
-      <Counter/>
+      {/* <Counter/> */}
       {/* State ကိုသုံးပြီး user input ယူခြင်း */}
-      <hr/>
+      {/* <hr/> */}
       <Input/>
 
     </div>
