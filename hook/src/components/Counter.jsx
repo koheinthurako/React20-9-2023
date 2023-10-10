@@ -1,4 +1,4 @@
-import {useContext, useState} from "react";
+import {useState, memo} from "react";
 import "./Counter.css";
 
 // Basic Hooks
@@ -6,7 +6,7 @@ import "./Counter.css";
 
 // State တစ်ခု change တိုင်း components တွေကို Rerender ပြန်လုပ်တယ် - အရေးကြီးတယ်
 
-const Counter = () => {
+const Counter = ({data}) => {
     const [count, setCount] = useState(0);
 
     const handleAdd = (x) => {
@@ -37,10 +37,11 @@ const Counter = () => {
         setCount(pre => pre - x);
     };
 
-    // console.log(count);
+    console.log("Child rendering");
 
   return (
     <div className="contentBox">
+        <p>{data}</p>
         <p>{count}</p>
         <div className="btnBox">
             <button onClick={() => {
@@ -54,4 +55,6 @@ const Counter = () => {
   )
 }
 
-export default Counter;
+// export default Counter;
+export default memo(Counter);
+// memo ရေးနည်းကို class components မှာ pureComponents လို့ခေါ်တယ်
