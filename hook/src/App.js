@@ -6,6 +6,8 @@ const App = () => {
   return (
     <div>
       <Counter/>
+      {/* State ကိုသုံးပြီး user input ယူခြင်း */}
+      
     </div>
   )
 }

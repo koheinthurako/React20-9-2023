@@ -1,12 +1,15 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
 import "./Counter.css";
+
+// Basic Hooks
+// useState, useEffect, useContext
 
 // State တစ်ခု change တိုင်း components တွေကို Rerender ပြန်လုပ်တယ် - အရေးကြီးတယ်
 
 const Counter = () => {
     const [count, setCount] = useState(0);
 
-    const handleAdd = () => {
+    const handleAdd = (x) => {
         // အောက်က unsafe state change ဖြစ်တယ် ဘာလို့လဲဆိုတော့ looping ပတ်ပြီး setCount မှာ count ကို ၁ တိုးပေမယ့်
         // console.log(count) နေရာတော့ useState(0) အထဲက 0 ကိုပဲသွားပြီး console ထုတ်ပြနေတယ် ဒါကြောင့် unsafe state ဖြစ်တယ်
         // for(let i = 0; i < 10; i++) {
@@ -26,12 +29,12 @@ const Counter = () => {
         // }
 
         // Shorten syntax
-        setCount(pre => pre + 1);
+        setCount(pre => pre + x);
         
     };
 
-    const handleRemove = () => {
-        setCount(pre => pre - 1);
+    const handleRemove = (x) => {
+        setCount(pre => pre - x);
     };
 
     // console.log(count);
@@ -40,8 +43,12 @@ const Counter = () => {
     <div className="contentBox">
         <p>{count}</p>
         <div className="btnBox">
-            <button onClick={handleAdd}>Add</button>
-            <button onClick={handleRemove}>Remove</button>
+            <button onClick={() => {
+                handleAdd(2);
+            }}>Add</button>
+            <button onClick={() => {
+                handleRemove(2);
+            }}>Remove</button>
         </div>
     </div>
   )
