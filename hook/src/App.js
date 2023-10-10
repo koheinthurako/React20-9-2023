@@ -1,5 +1,6 @@
 import React from 'react';
 import Counter from './components/Counter';
+import Input from './components/Input';
 import "./App.css";
 
 const App = () => {
@@ -7,7 +8,9 @@ const App = () => {
     <div>
       <Counter/>
       {/* State ကိုသုံးပြီး user input ယူခြင်း */}
-      
+      <hr/>
+      <Input/>
+
     </div>
   )
 }
