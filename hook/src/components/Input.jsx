@@ -32,7 +32,7 @@ const handleChange = (e) => {
     setText(e.target.value);
 }
 
-console.log("I am rendering");
+// console.log("I am rendering");
 
   return (
     <div>
