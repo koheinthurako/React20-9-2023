@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ComTwo from "./ComTwo";
 import "./One.css";
 
 const ComponentsOne = () => {
@@ -14,6 +15,11 @@ const ComponentsOne = () => {
     <div>
         {/* အောက်က ဟာက Conditional Styling ဖြစ်တယ် className ထဲမှာ condition စစ်ပြီးတော့ မှန်တဲ့ class ကို ထည့်ခြင်း */}
         <h1 className={toogle ? 'introText' : 'changeTextColor'}>Hello World</h1>
+
+        {/* အောက်က Conditional Rendering ဖြစ်တယ် သဘောက ပြချင်တဲ့အချိန်မှပြစေပြီး မလိုရင် ဖွက်ထားတဲ့သဘောဖြစ်တယ် {} ထဲမှာရေးရတယ် */}
+        {
+            toogle ? <ComTwo/> : null
+        }
         <button onClick={handleClick}>Toggle</button>
     </div>
   )
