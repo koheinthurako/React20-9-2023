@@ -18,7 +18,7 @@ const ComponentsOne = () => {
 
         {/* အောက်က Conditional Rendering ဖြစ်တယ် သဘောက ပြချင်တဲ့အချိန်မှပြစေပြီး မလိုရင် ဖွက်ထားတဲ့သဘောဖြစ်တယ် {} ထဲမှာရေးရတယ် */}
         {
-            toogle ? <ComTwo/> : null
+            toogle && <ComTwo/>
         }
         <button onClick={handleClick}>Toggle</button>
     </div>
