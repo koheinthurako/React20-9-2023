@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ComponentTwo from "./ComponentTwo";
 
 // useEffect အစ
 // componentDidMount, componentDidUpdate, and componentWillUnmount
@@ -22,18 +23,19 @@ const ComponentEffect = () => {
 
     // mounted => ComponentsMounted
     useEffect(() => {
-        console.log("Mounted");
-        // အဆုံးမှာ ဒီလို [] ထည့်ပေးလိုက်ခြင်းဖြင့် mounted ဖြစ်တဲ့အချိန်မှာပဲအလုပ်လုပ်စေတယ်
+        // console.log("Mounted");
+        // အဆုံးမှာ ဒီလို [] ထည့်ပေးလိုက်ခြင်းဖြင့် mounted ဖြစ်တဲ့အချိန်မှာပဲအလုပ်လုပ်စေတယ် မထည့်ရင် screen ပေါ်ကတစ်ခုခုပြောင်းသွားတိုင်း
+        // rendering ချပြီး useEffect() ထဲက console.log("Mounted") က အလုပ်လုပ်နေမှာပဲဖြစ်တယ်
     }, [])
 
     // didComponents
     useEffect(() => {
-        console.log("I am didComponents", count);
+        // console.log("I am didComponents", count);
     })
 
     // components will update when value was change
     useEffect(() => {
-        console.log("toggle was changed");
+        // console.log("toggle was changed");
     }, [toggle]);
     
     const handleClick = () => {
@@ -47,7 +49,9 @@ const ComponentEffect = () => {
   return (
     <div>
         <p>{count}</p>
-        {toggle && <h1>Hello</h1>}
+        {/* {toggle && <h1>Hello</h1>} */}
+        {/* <ComponentTwo/> */}
+        {toggle && <ComponentTwo/>}
         <button onClick={handleClick}>Add</button>
         <button onClick={handleToggle}>Toggle</button>
     </div>
