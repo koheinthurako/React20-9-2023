@@ -18,3 +18,22 @@
     align-items: center;
 }
 
+.container.contact{
+    width: 100vw;
+    height: 100vh;
+    background-color: #7b00ff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container.service{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ff0059;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
