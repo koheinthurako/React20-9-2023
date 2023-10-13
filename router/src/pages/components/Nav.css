@@ -1,0 +1,10 @@
+.NavContainer > ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.NavContainer a {
+    text-decoration: none;
+}

@@ -2,7 +2,7 @@ import "./page.css";
 
 const Service = () => {
   return (
-    <div>Service</div>
+    <div className="container">Service</div>
   )
 }
 
