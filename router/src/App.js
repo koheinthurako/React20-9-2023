@@ -20,6 +20,8 @@ const App = () => {
         <Route path="/service" element={<Service/>}/>
         {/* Page ထဲမှာပါဝင်တဲ့ path တွေမဟုတ်ပဲ တခြားမရှိတဲ့ path တစ်ခုခုကို သွားရင် error ပြအောင် path နေရာမှာ "*" ထည့်ပေးရတယ် */}
         <Route path="*" element={<Error/>}/>
+
+        {/* react-router-dom မှာပါသော hook များ */}
       </Routes>
     </Rounter>
   )

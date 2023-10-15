@@ -8,3 +8,7 @@
 .NavContainer a {
     text-decoration: none;
 }
+
+.active {
+    color: red;
+}

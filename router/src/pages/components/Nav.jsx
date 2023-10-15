@@ -11,15 +11,16 @@ const Nav = () => {
                     ရေးတဲ့အခါမှာလည်း Link သည် <a></a> tag သဘောမျိုးဖြစ်သည့်အတွက် Route ထဲက path တွေကိုသုံးပြီး Link ခုန်ထားတဲ့အတွက်
                     <Router></Router> ထဲမှာပဲ မူလ <Nav/> ကိုထည့်ရေးရတယ် အပြင်ထုတ်ရေးလို့မရပါ
                 */}
-                <Link to={'/'}>Home</Link>
+                <NavLink to={'/'}>Home</NavLink>
             </li>
             <li>
-                <Link to={'/about'}>About</Link>
+                <NavLink to={'/about'}>About</NavLink>
             </li>
             <li>
-                <Link to={'/service'}>Service</Link>
+                <NavLink to={'/service'}>Service</NavLink>
             </li>
             <li>
+                {/* NavLink သည် တစ်ခုခုကို နှိပ်လိုက်တာနဲ့ active class ကို default အနေနဲ့ auto ထည့်ပေးပြီး active ဖြစ်ရင် ဘာလုပ်မယ် မလုပ်ဘူးဆိုတာကို လုပ်နိုင်သည် */}
                 <NavLink to={'/contact'}>Contact</NavLink>
             </li>
         </ul>
