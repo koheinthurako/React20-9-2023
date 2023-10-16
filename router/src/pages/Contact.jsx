@@ -6,7 +6,7 @@ const Contact = () => {
   const navigate = useNavigate();
 
   const toContact = () => {
-    navigate("/");
+    navigate(-1);
   }
 
   return (
