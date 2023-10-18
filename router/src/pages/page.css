@@ -83,3 +83,14 @@
     justify-content: center;
     align-items: center;
 }
+
+.container.admin{
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    background-color: #b10061;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

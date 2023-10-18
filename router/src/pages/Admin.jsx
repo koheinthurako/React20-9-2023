@@ -1,9 +1,16 @@
+import { Navigate } from "react-router-dom";
+
 const Admin = () => {
-  return (
-    <div className="container">
-        <h1>Admin</h1>
-    </div>
-  )
+
+    if(localStorage.getItem("admin")) {
+        return (
+            <div className="container admin">
+                <h1>Admin</h1>
+            </div>
+          )      
+    } else {
+        return <Navigate to={"/"} />
+    }
 }
 
 export default Admin;
