@@ -4,6 +4,7 @@ import Contact from "./pages/Contact";
 import Service from "./pages/Service";
 import Nav from "./pages/components/Nav";
 import Error from "./pages/Error";
+import Admin from "./pages/Admin";
 import { BrowserRouter as Rounter, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/service" element={<Service/>}/>
+        <Route path="/admin" element={<Admin/>}/>
         {/* Page ထဲမှာပါဝင်တဲ့ path တွေမဟုတ်ပဲ တခြားမရှိတဲ့ path တစ်ခုခုကို သွားရင် error ပြအောင် path နေရာမှာ "*" ထည့်ပေးရတယ် */}
         <Route path="*" element={<Error/>}/>
 

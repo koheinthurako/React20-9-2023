@@ -23,7 +23,6 @@ const Home = () => {
   const inputRef = useRef();
 
   const handleClick = () => {
-    console.log(inputRef.current.value);
     navigate("/service", {state:{text:inputRef.current.value}})
   }
 

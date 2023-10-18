@@ -10,13 +10,13 @@ const Service = () => {
   }
 
   const location = useLocation();
-  // console.log(location.state);
 
   return (
     <div className="container service">
       <div className="toBoxes">
         <h1>Back To Home</h1>
-        <p>{location.state.text}</p>
+        {/* <p>{location.state ? location.state.text : null}</p> */}
+        <p>{location.state?.text}</p>
         <button onClick={toService}>Click Here!</button>
       </div> 
     </div>
