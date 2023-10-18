@@ -1,10 +1,30 @@
-.container.home{
+.container.home {
     width: 100vw;
     height: 100vh;
     background-color: #a52a2a;
     font-size: 20px;
+}
+
+.container .inputBox {
     display: flex;
-    /* flex-direction: column; */
+    gap: 12px;
+    justify-content: center;
+    padding: 50px 0 70px 0;
+}
+
+.container .inputBox > button {
+    width: 70px;
+}
+
+.container .inputBox > input {
+    width: 340px;
+    border: none;
+    border-radius: 7px;
+}
+
+.container .boxContainer{
+    display: flex;
+    /* flex-direction: row; */
     gap: 70px;
     justify-content: center;
     align-items: center;

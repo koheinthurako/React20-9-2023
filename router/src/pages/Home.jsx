@@ -1,4 +1,5 @@
 import "./page.css";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -18,19 +19,32 @@ const Home = () => {
     navigate("/contact");
   }
 
+  // useRef ကိုသုံးပြီး Route တစ်ခုထဲက data ကို တခြား Route တစ်ခုထဲပေးပို့ခြင်း
+  const inputRef = useRef();
+
+  const handleClick = () => {
+    console.log(inputRef.current.value);
+  }
+
   return (
     <div className="container home">
-      <div className="toBoxes">
-        <h1>TO ABOUT</h1>
-        <button onClick={toAbout}>Click Here!</button>
+      <div className="inputBox">
+        <input ref={inputRef} type="text" placeholder=" Type Something . . ."/>
+        <button onClick={handleClick}>Click</button>
       </div>
-      <div className="toBoxes">
-        <h1>TO SERVICE</h1>
-        <button onClick={toService}>Click Here!</button>
-      </div>
-      <div className="toBoxes">
-        <h1>TO CONTACT</h1>
-        <button onClick={toContact}>Click Here!</button>
+      <div className="boxContainer">
+        <div className="toBoxes">
+          <h1>TO ABOUT</h1>
+          <button onClick={toAbout}>Click Here!</button>
+        </div>
+        <div className="toBoxes">
+          <h1>TO SERVICE</h1>
+          <button onClick={toService}>Click Here!</button>
+        </div>
+        <div className="toBoxes">
+          <h1>TO CONTACT</h1>
+          <button onClick={toContact}>Click Here!</button>
+        </div>
       </div>
     </div>
   )
