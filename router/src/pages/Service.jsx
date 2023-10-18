@@ -1,5 +1,5 @@
 import "./page.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Service = () => {
 
@@ -9,10 +9,14 @@ const Service = () => {
     navigate("/");
   }
 
+  const location = useLocation();
+  // console.log(location.state);
+
   return (
     <div className="container service">
       <div className="toBoxes">
         <h1>Back To Home</h1>
+        <p>{location.state.text}</p>
         <button onClick={toService}>Click Here!</button>
       </div> 
     </div>

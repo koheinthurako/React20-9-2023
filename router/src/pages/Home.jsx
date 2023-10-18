@@ -19,17 +19,18 @@ const Home = () => {
     navigate("/contact");
   }
 
-  // useRef ကိုသုံးပြီး Route တစ်ခုထဲက data ကို တခြား Route တစ်ခုထဲပေးပို့ခြင်း
+  // useRef ကိုသုံးပြီး Route တစ်ခုထဲက data ကို တခြား Route တစ်ခုထဲပေးပို့ချင်ရင် useLocation Hook နဲ့တွဲသုံးပြီးပို့ပေးလို့ရသည်
   const inputRef = useRef();
 
   const handleClick = () => {
     console.log(inputRef.current.value);
+    navigate("/service", {state:{text:inputRef.current.value}})
   }
 
   return (
     <div className="container home">
       <div className="inputBox">
-        <input ref={inputRef} type="text" placeholder=" Type Something . . ."/>
+        <input ref={inputRef} type="text" placeholder=" Type Something and this data will sent to service tab"/>
         <button onClick={handleClick}>Click</button>
       </div>
       <div className="boxContainer">
