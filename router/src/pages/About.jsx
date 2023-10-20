@@ -18,11 +18,16 @@ const About = () => {
   const handleClick = e => {
     // console.log("Click");
     e.preventDefault();
-    // setQuery({name: "Thet Zaw Hein", age:25});
     console.log(formRef.current[0].value);
     console.log(formRef.current[1].value);
+    setQuery({name: formRef.current[0].value, age:formRef.current[1].value});
   }
 
+  const handleGet = () => {
+    // အောက်က name & age က setQuery ထဲက data
+    console.log(query.get("name"), query.get("age"));
+    // query.get(name);
+  };
 
   return (
     <div className="container about">
@@ -34,6 +39,9 @@ const About = () => {
           <input type="number" placeholder="Password" style={{width:"320px", height: "34px", borderRadius: "7px", border: "none", paddingLeft: "12px", margin: "20px 0"}}/>
           <button onClick={handleClick}>Search Query</button>
         </form>
+        <br/>
+        {/* ဒီ button က form မှတစ်ဆင့် ရှာလိုက်တဲ့ URL ထဲက query တန်ဖိုးတွေကို query.get() method နဲ့ပြန်ယူခြင်း */}
+        <button onClick={handleGet}>Get Query</button>
       </div>
     </div>
   )
