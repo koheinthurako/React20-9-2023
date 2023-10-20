@@ -9,14 +9,14 @@ const Contact = () => {
     navigate(-1);
   }
 
-  const params = useParams();
+  const {name} = useParams();
 
-  console.log(params);
+  // console.log(params);
 
   return (
     <div className="container contact">
       <div className="toBoxes">
-        <h1>Back To Home</h1>
+        <h1>{name}</h1>
         <button onClick={toContact}>Click Here!</button>
       </div>
     </div>
