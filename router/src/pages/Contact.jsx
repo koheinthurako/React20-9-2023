@@ -1,5 +1,5 @@
 import "./page.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Contact = () => {
 
@@ -8,6 +8,10 @@ const Contact = () => {
   const toContact = () => {
     navigate(-1);
   }
+
+  const params = useParams();
+
+  console.log(params);
 
   return (
     <div className="container contact">

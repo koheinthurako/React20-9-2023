@@ -17,7 +17,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
-        <Route path="/contact" element={<Contact/>}/>
+        {/* 
+          contact နောက်မှာ :id ထည့်လိုက်ခြင်းဖြင့် url မှတစ်ဆင့် id ကို contact ဆီသို့ useParams hook ကိုသုံးပြီး data ပေးပို့နိုင်သည်
+          ထိုသို့ id ထည့်လိုက်ရင် url မှာ ရိုးရိုး /contact ဆိုဝင်မရတော့ပဲ /contact/123456 ဆိုမှသာ ဝင်လို့ရသည်
+        */}
+        <Route path="/contact/:id" element={<Contact/>}/>
         <Route path="/service" element={<Service/>}/>
         {/*
           အောက်က Admin Route ထဲကို မဆိုင်သူမဝင်စေဘဲ admin တွေပဲဝင်စေချင်ရင် middleware တွေနဲ့ ကြားခံ cover လုပ်ပြီးစစ်ထားလို့ရတယ်
