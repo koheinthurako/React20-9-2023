@@ -23,6 +23,9 @@ const Nav = () => {
                 {/* NavLink သည် တစ်ခုခုကို နှိပ်လိုက်တာနဲ့ active class ကို default အနေနဲ့ auto ထည့်ပေးပြီး active ဖြစ်ရင် ဘာလုပ်မယ် မလုပ်ဘူးဆိုတာကို လုပ်နိုင်သည် */}
                 <NavLink to={'/contact'}>Contact</NavLink>
             </li>
+            <li>
+                <NavLink to={'/nest'}>Nest</NavLink>
+            </li>
         </ul>
     </div>
   )
