@@ -31,14 +31,15 @@ const App = () => {
         <Route path="/service" element={<Service/>}/>
         {/* 
           Nested Route အကြောင်းကို Nest.jsx ထဲမှာကြည့်ပါ
-          Nested Route ရေးမယ်ဆိုရင် အောက်ကလိုရေးပြီး အထဲက Route ရှိ path လမ်းကြောင်းတွေတွင် "/" ခံစရာမလိုပါ
-          Nested Route ကို ခလုတ်တစ်ခုနှိပ်လိုက်တိုင်း မူလ screen ပေါ်ရှိ အရာများ ပြောင်းလဲသွားတာမျိုးတွေဖြစ်ချင်ရင်သုံးတယ်
+          Nested Route ရေးမယ်ဆိုရင် အောက်ကလိုရေးပြီး အထဲက Route ရှိ path လမ်းကြောင်းတွေတွင် "/" ခံစရာမလိုတော့ပါ
+          Nested Route ကို ခလုတ်တစ်ခုနှိပ်လိုက်တိုင်း မူလ screen ပေါ်ရှိ အရာတွေတစ်ခုနဲ့တစ်ခုအစားထိုး ပြောင်းလဲသွားတာမျိုးတွေဖြစ်ချင်ရင်သုံးတယ်
           Nested Route ထဲက Route တွေက Parent Route ထဲမှာပဲသွား run ထဲအတွက် Parent Route ထဲက element <Nest/> ကို
           ဘယ်နေရာမှာ ပြစေချင်လဲဆိုတာ အရင်လုပ်ဖို့လိုတယ် အဲ့လိုလုပ်ဖို့ Parent Route မှာ react-router-dom ထဲက Outlet ကိုသုံးပြီး
           child route တွေကို rendering လုပ်နိုင်တယ်
+          အောက်မှာ parent Nest ထဲကို ဝင်ဝင်ချင်း One ကိုအရင်ချပြထားချင်တယ်ဆိုရင် path ကိုဖျက်ပြီး index ရေးလို့ရတယ်
         */}
         <Route path="/nest" element={<Nest/>}>
-          <Route path="one" element={<One/>}/>
+          <Route index element={<One/>}/>
           <Route path="two" element={<Two/>}/>
           <Route path="three" element={<Three/>}/>
         </Route>

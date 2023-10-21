@@ -7,7 +7,7 @@ const Nest = () => {
       <div>
         <ul>
           <li>
-            <Link to="/nest/one">One</Link>
+            <Link to="/nest">One</Link>
           </li>
           <li>
             <Link to="/nest/two">Two</Link>
