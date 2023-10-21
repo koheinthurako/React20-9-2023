@@ -6,6 +6,9 @@ import Nav from "./pages/components/Nav";
 import Error from "./pages/Error";
 import Admin from "./pages/Admin";
 import Nest from "./pages/Nest";
+import One from "./pages/Nest/One";
+import Two from "./pages/Nest/Two";
+import Three from "./pages/Nest/Three";
 import { BrowserRouter as Rounter, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -26,8 +29,19 @@ const App = () => {
         */}
         <Route path="/contact/:name" element={<Contact/>}/>
         <Route path="/service" element={<Service/>}/>
-        {/* Nested Route အကြောင်းကို Nest.jsx ထဲမှာကြည့်ပါ */}
-        <Route path="/nest" element={<Nest/>}/>
+        {/* 
+          Nested Route အကြောင်းကို Nest.jsx ထဲမှာကြည့်ပါ
+          Nested Route ရေးမယ်ဆိုရင် အောက်ကလိုရေးပြီး အထဲက Route ရှိ path လမ်းကြောင်းတွေတွင် "/" ခံစရာမလိုပါ
+          Nested Route ကို ခလုတ်တစ်ခုနှိပ်လိုက်တိုင်း မူလ screen ပေါ်ရှိ အရာများ ပြောင်းလဲသွားတာမျိုးတွေဖြစ်ချင်ရင်သုံးတယ်
+          Nested Route ထဲက Route တွေက Parent Route ထဲမှာပဲသွား run ထဲအတွက် Parent Route ထဲက element <Nest/> ကို
+          ဘယ်နေရာမှာ ပြစေချင်လဲဆိုတာ အရင်လုပ်ဖို့လိုတယ် အဲ့လိုလုပ်ဖို့ Parent Route မှာ react-router-dom ထဲက Outlet ကိုသုံးပြီး
+          child route တွေကို rendering လုပ်နိုင်တယ်
+        */}
+        <Route path="/nest" element={<Nest/>}>
+          <Route path="one" element={<One/>}/>
+          <Route path="two" element={<Two/>}/>
+          <Route path="three" element={<Three/>}/>
+        </Route>
         {/*
           အောက်က Admin Route ထဲကို မဆိုင်သူမဝင်စေဘဲ admin တွေပဲဝင်စေချင်ရင် middleware တွေနဲ့ ကြားခံ cover လုပ်ပြီးစစ်ထားလို့ရတယ်
           example code တွေကို Admin.jsx ထဲမှာကြည့်ပါ

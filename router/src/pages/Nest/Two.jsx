@@ -2,7 +2,7 @@ import React from 'react'
 
 const Two = () => {
   return (
-    <div>Two</div>
+    <div>I am Two</div>
   )
 }
 
