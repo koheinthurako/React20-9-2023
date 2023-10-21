@@ -5,6 +5,7 @@ import Service from "./pages/Service";
 import Nav from "./pages/components/Nav";
 import Error from "./pages/Error";
 import Admin from "./pages/Admin";
+import Nest from "./pages/Nest";
 import { BrowserRouter as Rounter, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -25,6 +26,8 @@ const App = () => {
         */}
         <Route path="/contact/:name" element={<Contact/>}/>
         <Route path="/service" element={<Service/>}/>
+        {/* Nested Route အကြောင်းကို Nest.jsx ထဲမှာကြည့်ပါ */}
+        <Route path="/nest" element={<Nest/>}/>
         {/*
           အောက်က Admin Route ထဲကို မဆိုင်သူမဝင်စေဘဲ admin တွေပဲဝင်စေချင်ရင် middleware တွေနဲ့ ကြားခံ cover လုပ်ပြီးစစ်ထားလို့ရတယ်
           example code တွေကို Admin.jsx ထဲမှာကြည့်ပါ

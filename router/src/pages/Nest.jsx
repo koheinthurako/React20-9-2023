@@ -6,4 +6,4 @@ const Nest = () => {
   )
 }
 
-export default Nest
+export default Nest;
