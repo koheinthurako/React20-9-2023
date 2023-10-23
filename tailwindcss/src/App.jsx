@@ -12,9 +12,21 @@ const App = () => {
       <h2 className='text-yellow-600 p-5 bg-red-900 my-5 text-2xl italic md:not-italic'>Hello World</h2>
       <p className='text-yellow-500 bg-blue-900 text-5xl italic hover:not-italic mb-5 p-5 font-bold'>Hello World</p>
       <ul>
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
+        <li>
+          <p className='mb-5 leading-loose'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam voluptate dicta veritatis ad, laborum dolorum ratione eius quaerat assumenda rerum sint sapiente omnis maiores hic, ex reprehenderit corporis! Suscipit, adipisci!
+          </p>
+        </li>
+        <li>
+          <p className='mb-5 font-mono'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quidem beatae reprehenderit nam tempora vero, necessitatibus odit. Perspiciatis assumenda numquam sint voluptas nobis autem error, reprehenderit molestias dolore, eius quae.
+          </p>
+        </li>
+        <li>
+          <p className='mb-5 tracking-widest'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque ratione corrupti enim? Perferendis, earum veniam, vero quibusdam sed vitae nisi corporis ducimus dolorem nostrum sint perspiciatis aliquam repellendus! Necessitatibus, ad.
+          </p>
+        </li>
       </ul>
     </div>
   )
