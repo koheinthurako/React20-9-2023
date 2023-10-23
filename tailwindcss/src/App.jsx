@@ -13,7 +13,7 @@ const App = () => {
       <p className='text-yellow-500 bg-blue-900 text-5xl italic hover:not-italic mb-5 p-5 font-bold'>Hello World</p>
       <ul>
         <li>
-          <p className='mb-5 leading-loose'>
+          <p className='mb-5 leading-loose text-white bg-black p-12'>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam voluptate dicta veritatis ad, laborum dolorum ratione eius quaerat assumenda rerum sint sapiente omnis maiores hic, ex reprehenderit corporis! Suscipit, adipisci!
           </p>
         </li>
@@ -28,6 +28,11 @@ const App = () => {
           </p>
         </li>
       </ul>
+      <div className='flex justify-center my-16 gap-12'>
+        <button className='bg-purple-700 px-5 py-3 rounded-md text-white'>Button 1</button>
+        <button className='bg-pink-700 px-5 py-3 rounded-md text-white'>Button 2</button>
+        <button className='bg-orange-700 px-5 py-3 rounded-md text-white'>Button 3</button>
+      </div>
     </div>
   )
 }
