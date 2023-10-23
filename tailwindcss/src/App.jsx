@@ -29,9 +29,16 @@ const App = () => {
         </li>
       </ul>
       <div className='flex justify-center my-16 gap-12'>
-        <button className='bg-purple-700 px-5 py-3 rounded-md text-white'>Button 1</button>
+        <button className='bg-purple-700 px-[50px] py-3 rounded-md text-white'>Button 1</button>
         <button className='bg-pink-700 px-5 py-3 rounded-md text-white'>Button 2</button>
-        <button className='bg-orange-700 px-5 py-3 rounded-md text-white'>Button 3</button>
+        <button className='bg-orange-700 px-[50px] py-3 rounded-md text-white'>Button 3</button>
+      </div>
+      <div className='container mx-auto bg-red-900 h-screen'>
+        <div className='p-10 text-white'>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo expedita quam officiis adipisci non modi, iure quos voluptas veritatis facilis maxime nesciunt deserunt repellendus facere dolorum explicabo sapiente impedit ratione.
+          </p>
+        </div>
       </div>
     </div>
   )
