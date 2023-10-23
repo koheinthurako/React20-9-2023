@@ -33,9 +33,18 @@ const App = () => {
         <button className='bg-pink-700 px-5 py-3 rounded-md text-white'>Button 2</button>
         <button className='bg-orange-700 px-[50px] py-3 rounded-md text-white'>Button 3</button>
       </div>
-      <div className='container mx-auto bg-red-900 h-screen'>
-        <div className='p-10 text-white'>
-          <p>
+      <div className='container mx-auto bg-red-900 h-screen divide-y'>
+        <div className='p-10 text-white flex flex-col gap-12'>
+          <p className='border-4 p-5'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo expedita quam officiis adipisci non modi, iure quos voluptas veritatis facilis maxime nesciunt deserunt repellendus facere dolorum explicabo sapiente impedit ratione.
+          </p>
+          <p className='border-2 border-b-8 p-5'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo expedita quam officiis adipisci non modi, iure quos voluptas veritatis facilis maxime nesciunt deserunt repellendus facere dolorum explicabo sapiente impedit ratione.
+          </p>
+          <p className='border-indigo-200 border-b-8 p-5'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo expedita quam officiis adipisci non modi, iure quos voluptas veritatis facilis maxime nesciunt deserunt repellendus facere dolorum explicabo sapiente impedit ratione.
+          </p>
+          <p className='border-x-8 p-5'>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo expedita quam officiis adipisci non modi, iure quos voluptas veritatis facilis maxime nesciunt deserunt repellendus facere dolorum explicabo sapiente impedit ratione.
           </p>
         </div>
