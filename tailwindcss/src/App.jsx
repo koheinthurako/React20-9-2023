@@ -49,28 +49,6 @@ const App = () => {
           </p>
         </div>
       </div>
-      <div className='flex justify-center my-16 gap-12'>
-        <button className='bg-purple-700 px-[50px] py-3 rounded-md text-white'>Button 1</button>
-        <button className='bg-pink-700 px-5 py-3 rounded-md text-white'>Button 2</button>
-        <button className='bg-orange-700 px-[50px] py-3 rounded-md text-white'>Button 3</button>
-      </div>
-      <ul>
-        <li>
-          <p className='mb-5 leading-loose text-white bg-black p-12'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam voluptate dicta veritatis ad, laborum dolorum ratione eius quaerat assumenda rerum sint sapiente omnis maiores hic, ex reprehenderit corporis! Suscipit, adipisci!
-          </p>
-        </li>
-        <li>
-          <p className='mb-5 font-mono'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quidem beatae reprehenderit nam tempora vero, necessitatibus odit. Perspiciatis assumenda numquam sint voluptas nobis autem error, reprehenderit molestias dolore, eius quae.
-          </p>
-        </li>
-        <li>
-          <p className='mb-5 tracking-widest'>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque ratione corrupti enim? Perferendis, earum veniam, vero quibusdam sed vitae nisi corporis ducimus dolorem nostrum sint perspiciatis aliquam repellendus! Necessitatibus, ad.
-          </p>
-        </li>
-      </ul>
     </div>
   )
 }
