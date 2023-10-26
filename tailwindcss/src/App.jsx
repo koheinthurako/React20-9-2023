@@ -49,7 +49,11 @@ const App = () => {
           </p>
         </div>
       </div>
-      
+      <div className='flex justify-center my-16 gap-12'>
+        <button className='bg-purple-700 px-[50px] py-3 rounded-md text-white'>Button 1</button>
+        <button className='bg-pink-700 px-5 py-3 rounded-md text-white'>Button 2</button>
+        <button className='bg-orange-700 px-[50px] py-3 rounded-md text-white'>Button 3</button>
+      </div>
     </div>
   )
 }
