@@ -61,12 +61,16 @@ const App = () => {
         <h1 className='text-5xl opacity-80'>Hello World</h1>
         <h1 className='text-5xl opacity-100'>Hello World</h1>
       </div>
-      <div className="flex flex-wrap justify-center gap-5 mb-12 bg-black p-12">
-        <div className='w-20 h-20 text-white text-center bg-red-500'>1</div>
-        <div className='w-20 h-20 text-white text-center bg-blue-500'>2</div>
-        <div className='w-20 h-20 text-white text-center bg-orange-500'>3</div>
-        <div className='w-20 h-20 text-white text-center bg-pink-500'>4</div>
-        <div className='w-20 h-20 text-white text-center bg-purple-500'>5</div>
+      <div className="flex flex-wrap flex-row-reverse justify-center gap-5 mb-12 bg-black p-12">
+        <div className='w-20 h-20 text-white text-center py-6 bg-red-500'>1</div>
+        <div className='w-20 h-20 text-white text-center py-6 bg-blue-500'>2</div>
+        <div className='w-20 h-20 text-white text-center py-6 bg-orange-500'>3</div>
+        <div className='w-20 h-20 text-white text-center py-6 bg-pink-500'>4</div>
+        <div className='w-20 h-20 text-white text-center py-6 bg-purple-500'>5</div>
+      </div>
+      {/* Position */}
+      <div className="relative w-1/2 bg-gray-900 h-40">
+        
       </div>
     </div>
   )
