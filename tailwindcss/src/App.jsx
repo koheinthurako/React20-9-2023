@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./index.css";
 
 const App = () => {
   return (
@@ -50,10 +51,11 @@ const App = () => {
         </div>
       </div>
       <div className='flex justify-center my-16 gap-12'>
-        <button className='bg-white shadow px-[50px] py-3 rounded-md shadow-cyan-600'>Button 1</button>
-        <button className='bg-white shadow-xl px-5 py-3 rounded-md shadow-blue-300'>Button 2</button>
-        <button className='bg-white shadow-2xl px-[50px] py-3 rounded-md shadow-red-600'>Button 3</button>
-        <button className='bg-white shadow-lg px-[50px] py-3 rounded-md shadow-[#0c0c0c]'>Button 3</button>
+        {/* connect btn class that is within index.css  */}
+        <button className='btn bg-cyan-100 hover:shadow-orange-600 hover:bg-orange-600 hover:text-white'>Button 1</button>
+        <button className='btn bg-purple-100 hover:shadow-pink-600 hover:bg-pink-600 hover:text-white'>Button 2</button>
+        <button className='btn bg-pink-100 hover:shadow-red-600 hover:bg-red-600 hover:text-white'>Button 3</button>
+        <button className='btn bg-red-100 hover:shadow-cyan-600 hover:bg-cyan-600 hover:text-white'>Button 3</button>
       </div>
       <div className='flex gap-12 my-12'>
         <h1 className='text-5xl opacity-25 sm:text-red-900'>Hello World</h1>
