@@ -50,9 +50,16 @@ const App = () => {
         </div>
       </div>
       <div className='flex justify-center my-16 gap-12'>
-        <button className='bg-purple-700 px-[50px] py-3 rounded-md text-white'>Button 1</button>
-        <button className='bg-pink-700 px-5 py-3 rounded-md text-white'>Button 2</button>
-        <button className='bg-orange-700 px-[50px] py-3 rounded-md text-white'>Button 3</button>
+        <button className='bg-white shadow px-[50px] py-3 rounded-md shadow-cyan-600'>Button 1</button>
+        <button className='bg-white shadow-xl px-5 py-3 rounded-md shadow-blue-300'>Button 2</button>
+        <button className='bg-white shadow-2xl px-[50px] py-3 rounded-md shadow-red-600'>Button 3</button>
+        <button className='bg-white shadow-lg px-[50px] py-3 rounded-md shadow-[#0c0c0c]'>Button 3</button>
+      </div>
+      <div className='flex gap-12'>
+        <h1 className='text-5xl opacity-25 sm:text-red-900'>Hello World</h1>
+        <h1 className='text-5xl opacity-60 md:text-blue-900'>Hello World</h1>
+        <h1 className='text-5xl opacity-80'>Hello World</h1>
+        <h1 className='text-5xl opacity-100'>Hello World</h1>
       </div>
     </div>
   )
