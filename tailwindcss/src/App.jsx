@@ -55,11 +55,18 @@ const App = () => {
         <button className='bg-white shadow-2xl px-[50px] py-3 rounded-md shadow-red-600'>Button 3</button>
         <button className='bg-white shadow-lg px-[50px] py-3 rounded-md shadow-[#0c0c0c]'>Button 3</button>
       </div>
-      <div className='flex gap-12'>
+      <div className='flex gap-12 my-12'>
         <h1 className='text-5xl opacity-25 sm:text-red-900'>Hello World</h1>
         <h1 className='text-5xl opacity-60 md:text-blue-900'>Hello World</h1>
         <h1 className='text-5xl opacity-80'>Hello World</h1>
         <h1 className='text-5xl opacity-100'>Hello World</h1>
+      </div>
+      <div className="flex flex-wrap justify-center gap-5 mb-12 bg-black p-12">
+        <div className='w-20 h-20 text-white text-center bg-red-500'>1</div>
+        <div className='w-20 h-20 text-white text-center bg-blue-500'>2</div>
+        <div className='w-20 h-20 text-white text-center bg-orange-500'>3</div>
+        <div className='w-20 h-20 text-white text-center bg-pink-500'>4</div>
+        <div className='w-20 h-20 text-white text-center bg-purple-500'>5</div>
       </div>
     </div>
   )
