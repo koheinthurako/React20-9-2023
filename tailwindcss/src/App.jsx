@@ -70,7 +70,8 @@ const App = () => {
       </div>
       {/* Position */}
       <div className="relative w-1/2 bg-gray-900 h-40">
-        
+        <div className="absolute top-0 right-10 bg-red-500 w-32 h-32 hover:bg-blue-500"></div>
+        <div className="absolute bottom-0 left-10 bg-yellow-500 w-32 h-32 hover:static hover:bg-purple-500"></div>
       </div>
     </div>
   )
