@@ -1,0 +1,14 @@
+.listContainer {
+    width: 100%;
+    height: 50px;
+    background-color: #b59700;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.done {
+    background-color: #00b487;
+    text-decoration: line-through;
+}

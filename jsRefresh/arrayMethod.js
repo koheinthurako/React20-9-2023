@@ -15,7 +15,7 @@
 */
 
 
-// const array = [1, 2, 3, 4, 5];
+const array = [1, 2, 3, 4, 5];
 
 // Normal for loop
 // for(let i = 0; i <= array.length-1; i++) {
@@ -71,7 +71,7 @@
 // find ကလည်း အကုန် loop ပတ်ပြီး Condition True တစ်ခုစဖြစ်တာနဲ့ Looping ရပ်တယ် return value ကို array အနေနဲ့မဟုတ်ပဲ
 // သာမန်မူရင်း value တစ်ခုအနေနဲ့ပဲ ပြန်ထုတ်ပေးတယ်
 // const find = array.find((value, index, array) => {
-//     console.log(value, index, array);
+//     // console.log(value, index, array);
 //     return value === 3;
 // });
 // console.log(find);
@@ -85,15 +85,16 @@
 // const reduce = array.reduce((prev, current, index, array) => {
 //     console.log(prev, current, index, array);
 //     return prev + current;
-// }, 0); // ဒီနေရာက 0 က initial value ဖြစ်တယ် သူ့ကိုထည့်ထားရင် prev value က 0 ဖြစ်နေပြီး current value က array[0] ထဲကတန်ဖိုးဖြစ်သွားမယ်
+// }, 0);
+// ဒီနေရာက 0 က initial value ဖြစ်တယ် သူ့ကိုထည့်ထားရင် prev value က 0 ဖြစ်နေပြီး current value က array[0] ထဲကတန်ဖိုးဖြစ်သွားမယ်
 // console.log(reduce);
 
 
 
-// some က လည်း အကုန်လုံးကို loop ပတ်ပေမယ့် conditional တွေ boolean တန်ဖိုးတွေကိုပဲ return ပြန်ပေးတယ်
+// some က လည်း အကုန်လုံးကို loop ပတ်ပေမယ့် conditional တွေဖြစ်တဲ့ boolean တန်ဖိုးတွေကိုပဲ return ပြန်ပေးတယ် find လိုပဲ မှန်ပြီဆိုတာနဲ့ ရပ်တယ်
 // const condi = array.some((value,index, array) => {
-//     // console.log(value, index, array);
-//     return value < 2;
+//     console.log(value, index, array);
+//     return value > 2;
 // })
 
 // console.log(condi);
@@ -101,7 +102,7 @@
 
 
 // every ကလည်းအကုန် loop ပတ်ပြီး conditional တွေဖြစ်သည် သို့သော် သူသည် array ထဲက တန်ဖိုတွေအားလုံးကိုဆိုလိုသည်
-// condition စစ်တော့ array ထဲက တန်ဖိုးတွေအကုန် 2 ထက်ငယ်တယ်ဆိုလို့ false ပြန်ပေးသည်gi
+// condition စစ်တော့ array ထဲက တန်ဖိုးတွေအကုန် 2 ထက်ငယ်တယ်ဆိုလို့ false ပြန်ပေးသည်
 // const condi = array.every((value,index, array) => {
 //     // console.log(value, index, array);
 //     return value < 2;

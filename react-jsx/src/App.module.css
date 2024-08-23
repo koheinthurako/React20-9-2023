@@ -1,6 +1,16 @@
+/* Module CSS ရေးနည်း => ရေးမယ်ဆိုရင် .module.css ဆိုပြီးရေးပေးရတယ် အောက်က container class ကို footer ထဲမှာသုံးထားတယ်
+    module css ရေးနည်းက component style future support ပေးပါတယ်
+
+    Component Style Future Support ဆိုတာကတော့ Global CSS နဲ့မတူပဲ component တစ်ခုချင်းစီနဲ့သာ သက်ဆိုင်တဲ့ css ပဲဖြစ်ပါတယ်
+    ဥပမာ App Level Component ထဲမှာ Nav Component တွေထည့်ထားပြီး Global CSS ကိုချိတ်ထားရင် သူ့ထဲက css ‌တွေဟာ Nav Component
+    ကိုလည်းသက်ရောက်မှာဖြစ်ပြီး Component Style CSS ကတော့ App Level မှာသူ့ကိုချိတ်ထားရင်တောင် Nav Component ထဲအထိဆင်းပြီး မသက်ရောက်နိုင်ပါ
+*/
+
 .container {
     width: 100%;
-    height: 100vh;
-    color: #fff;
-    background: rgb(34, 34, 34);
+}
+
+h1 {
+    font-size: 34px;
+    color: #FF4500;
 }

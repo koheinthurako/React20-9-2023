@@ -7,6 +7,7 @@ import Propslist from "./components/Propslist";
 import { useRef, useState } from "react";
 import Form from "./components/Form";
 import {v4 as id} from "uuid";
+import Propstart from "./components/Propstart.jsx";
 
 const App = () => {
 
@@ -71,6 +72,7 @@ const App = () => {
   return (
     <div className="container">
       <Nav/>
+      
       {/* <div className="midContainer">
         <SlideBar/>
         <Main/>
@@ -102,14 +104,16 @@ const App = () => {
       </form> */}
       {/* အပေါ်က form code တွေကိုမသုံးတော့ပဲ ဒီနေရာမှာ form components အသစ်တစ်ခုစခွဲလိုက်ပါပြီ */}
       <Form onSubmit={handleClick}/>
-
+      
       {/* Using useState */}
       <div className="listMainBox">
-        {initialState.map((i) => <Propslist key={i.id} 
+        {initialState.map((i) => <Propslist key={i.id}
         data={i.name} onDelete={handleDelete} onEdit={handleEdit} id={i.id} isDone={i.isDone} onChecked={handleCheck}/>)}
       </div>
-
-      {/* <Footer/> */}
+      <div>
+        <Propstart/>
+      </div>
+      <Footer/>
 
     </div>
   )

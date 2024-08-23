@@ -60,11 +60,11 @@
 
 
 // Using spread operator with destructuring
-// const data = [1, 2, 3, 4, 5];
+const data = [1, 2, 3, 4, 5];
 
-// const [one, two, ...array] = data;
-// console.log(one, two, array);
+const [one, two, ...array] = data;
+console.log(one, two, array);
 
-// array[0] = 10;
-// console.log(array);
-// console.log(data);
+array[0] = 10;
+console.log(array);
+console.log(data);

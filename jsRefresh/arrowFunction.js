@@ -28,7 +28,7 @@ console.log(array());
 // }
 
 // This is new writting format in react;
-const obj = () => ({name:"TZH"});
+const obj = () => ({name:"TZH", age: 25});
 
 console.log(obj());
 
@@ -62,7 +62,7 @@ console.log(fun(2,3));
 console.dir(Function);
 
 
-// REACH မှာအသုံးများတဲ့ function prototype များ 
+// REACTw မှာအသုံးများတဲ့ function prototype များ 
 // Function.prototype.bind()
 
 const fun2 = new Function("a", "b", "return a + b").bind(null, 2,5);
