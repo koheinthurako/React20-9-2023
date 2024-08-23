@@ -1,15 +1,15 @@
-.formContainer {
-    margin: 50px 20px 20px;
-    display: flex;
-    background-color: orangered;
-  }
-  
-  .formContainer > input {
-    flex: 1;
-    padding: 7px;
-  }
+.formBox {
+  margin: 50px 20px 20px;
+  display: flex;
+  background-color: orangered;
+}
 
-  .formContainer > button {
-    width: 70px;
-    cursor: pointer;
-  }
+.formBox > input {
+  flex: 1;
+  padding: 7px;
+}
+
+.formBox > button {
+  width: 70px;
+  cursor: pointer;
+}

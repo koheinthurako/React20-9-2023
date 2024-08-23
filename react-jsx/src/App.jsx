@@ -8,6 +8,7 @@ import { useRef, useState } from "react";
 import Form from "./components/Form";
 import {v4 as id} from "uuid";
 import Propstart from "./components/Propstart.jsx";
+import Hookstart from "./components/Hookstart.jsx"
 
 const App = () => {
 
@@ -73,7 +74,7 @@ const App = () => {
     <div className="container">
       <Nav/>
       
-      {/* <div className="midContainer">
+      {/* <div className="midcontainer">
         <SlideBar/>
         <Main/>
       </div> */}
@@ -112,6 +113,7 @@ const App = () => {
       </div>
       <div>
         <Propstart/>
+        <Hookstart/>
       </div>
       <Footer/>
 

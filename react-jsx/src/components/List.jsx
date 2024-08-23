@@ -21,7 +21,8 @@ const List = ({name, age, location, isDone}) => {
       {/* <div style={isDone ? style.bgStyle : null}></div> */}
       
       {/* Attribute Binding => ပုံမှန် input type မှာ checked လို့ရေးလိုက်ရင် အကုန်လုံးအမှန်ဖြစ်သွားပြီး jsx မှာတော့ attribute နဲ့ တွဲပြီးသုံးလို့ရပါတယ်*/}
-        <input type="checkbox" name="" id="" checked={isDone}/>
+        {/* <input type="checkbox" name="" id="" checked={isDone}/> */}
+        <input type="checkbox" name="" id=""/>
         <h2>{name}</h2>
         <h2>{age}</h2>
         <h2>{location}</h2> 
