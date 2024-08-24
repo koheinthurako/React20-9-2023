@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.done {
+.isDone {
     background-color: #00b487;
     text-decoration: line-through;
 }

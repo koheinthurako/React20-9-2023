@@ -1,0 +1,11 @@
+jsx ဆိုတာဘာလဲ => App.jsx
+Conditional Rendering => App.jsx
+Bind Method => App.jsx
+Component Import Feature => App.jsx
+Object Destructuring => Propstart.jsx
+Props => Propstart.jsx
+Conditional Styling => Propstart.jsx
+Class Binding => Propstart.jsx
+Attribute Binding => Propstart.jsx
+Hook => Hookstart.jsx
+useRef => Hookstart.jsx

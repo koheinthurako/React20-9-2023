@@ -13,3 +13,8 @@
     width: 70px;
     cursor: pointer;
   }
+
+  .textWhite {
+    padding-left: 35px;
+    color: #fff;
+  }

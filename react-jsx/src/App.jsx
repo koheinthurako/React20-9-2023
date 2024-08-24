@@ -115,7 +115,7 @@ const App = () => {
         <Propstart/>
         <Hookstart/>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
 
     </div>
   )
