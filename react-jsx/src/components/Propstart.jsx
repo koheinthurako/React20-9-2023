@@ -1,11 +1,9 @@
 import List from "./List"
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 // Props အကြောင်းစမယ်
 // ဒီ component ထဲမှာ List ဆိုတဲ့ children component ရှိတယ် ဒီထဲကနေသူ့ရဲ့ child component ထဲကို data passing ပေးချင်ရင်
 // Prop ကိုသုံးနိုင်တယ်
-
-// အပေါ်က data တွေကို List ထဲလှမ်းပေးချင်တယ်ဆိုရင် prop(name နေရာမှာကြိုက်တာရေးနိုင်တယ်) ကိုသုံးနိုင်တယ်
 
 const style = {
   buttonStyle: {
@@ -22,15 +20,30 @@ const style = {
 const Propstart = () => {
 
   const data = ["Hla", "Aye", "Aung"];
+
+  // အပေါ်က data တွေကို List ထဲလှမ်းပေးချင်တယ်ဆိုရင် prop(name နေရာမှာကြိုက်တာရေးနိုင်တယ်) ကိုသုံးနိုင်တယ်
   
   const [initialState, setInitialState] = useState([
     {id: 1, name: "Thet", age: 26, location: "Yangon", isDone: false},
     {id: 2, name: "Zaw", age: 21, location: "Insein", isDone: true}
   ]);
 
+  // အောက်ကတော့ useState နဲ့ဆိုင်တဲ့ function အပိုင်းဖြစ်တယ်
+  const inputRef = useRef();
+
   const handleClick = () => {
     const data = {};
-    setInitialState([...initialState]);
+    console.log(inputRef.current.value);
+    data.name = inputRef.current.value;
+    data.isDone = false;
+    data.age = 25;
+    data.id = Math.random(Date.now()) * 100000000;
+    console.log(data);
+    inputRef.current.value = '';
+
+    // setInitialState က Data တွေကိုပြင်တယ်ဆိုပေမယ့် spreadOperator နဲ့တွဲပြီး အောက်ကလို အဟောင်းကောအသစ်ကော data တွေထပ်ထည့်လို့ရတယ်
+    setInitialState([...initialState, data]);
+    console.log(initialState)
   }
 
   return (
@@ -43,13 +56,16 @@ const Propstart = () => {
 
         {/* Props အကြောင်းပြီးသွားလို့ hook start က useState ကိုကြည့်ပြီးမှ အောက်က code တွေကိုဆက်ကြည့်ပါ */}
         {/* အပေါ်ကလို List တွေအများကြီးမရေးချင်လို့ useState ကိုသုံးပြီး looping ပတ်ထုတ်ချင်တယ်ဆိုရင် */}
-        {/* ဒါဆိုရင်တော့ အပေါ်က data နေရာတွေမှာ useState ထဲက Dynamic Object Array တွေဝင်သွားပြီး အောက်ကလို key နေရာမှာ custom id တွေထည့်ကာ */}
+        {/* အပေါ်က data နေရာတွေမှာ useState ထဲက Dynamic Object Array တွေဝင်သွားပြီး အောက်ကလို key နေရာမှာ custom id တွေထည့်ကာ */}
         {/* List ကို loop ပတ်ပြီးတော့ ထုတ်လို့ရသွားမှာပဲဖြစ်ပါတယ် */}
         {initialState.map(i => <List name={i.name} age={i.age} location={i.location} isDone={i.isDone} key={i.id}></List>)}
 
         {/* ဒီတစ်ခါတော့ အောက်က button ကိုနှိပ်တာနဲ့ handleClick method ကနေတစ်ဆင့် useState ထဲက initialState မှာရှိတဲ့ တန်ဖိုးတွေအပြင်
           နောက်ထပ်တန်ဖိုးတွေပါ ထပ်ထည့်ခြင်းဖြစ်တယ် နောက်ထပ်တန်ဖိုးတွေထပ်ထည့်ဖို့အတွက် Array ရဲ့ spread operator ကိုသုံးလို့ရတယ်
         */}
+        <div className="formBox">
+          <input ref={inputRef} type="text" placeholder="Input Element in Propstart File"></input>
+        </div>
         <button onClick={handleClick} style={style.buttonStyle}>Add more data</button>
     </div>
   )

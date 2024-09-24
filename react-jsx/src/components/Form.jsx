@@ -1,8 +1,11 @@
 import "./Form.css";
 import { useRef } from "react";
 
+// ဒီ Form Page က အောက်က Form ထဲမှာရှိတဲ့ data တွေကို Parent (App Level) ကိုပြန်ပေးရမှာမို့ Emitting ဆိုတဲ့သဘောတရားကိုသုံးပေးရတယ်
+
 const Form = ({onSubmit}) => {
 
+    console.log(onSubmit)
     const inputRef = useRef();
 
     const handleClick = (e) => {
