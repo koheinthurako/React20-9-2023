@@ -25,7 +25,8 @@ const Propstart = () => {
   
   const [initialState, setInitialState] = useState([
     {id: 1, name: "Thet", age: 26, location: "Yangon", isDone: false},
-    {id: 2, name: "Zaw", age: 21, location: "Insein", isDone: true}
+    {id: 2, name: "Zaw", age: 21, location: "Insein", isDone: true},
+    {id: 3, name: "Hein", age: 25, location: "Vietnam", isDone: false}
   ]);
 
   // အောက်ကတော့ useState နဲ့ဆိုင်တဲ့ function အပိုင်းဖြစ်တယ်

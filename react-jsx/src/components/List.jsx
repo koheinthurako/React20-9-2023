@@ -25,7 +25,7 @@ const List = ({name, age, location, isDone}) => {
         {/* <input type="checkbox" name="" id=""/> */}
         <h2>{name}</h2>
         <h2>{age}</h2>
-        <h2>{location}</h2> 
+        <h2>{location}</h2>
     </div>
   )
 }
