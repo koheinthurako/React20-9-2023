@@ -103,7 +103,12 @@ const App = () => {
         <input ref={inputRef} type="text" placeholder="Write something..."/>
         <button onClick={handleClick}>Add</button>
       </form> */}
-      {/* အပေါ်က form code တွေကိုမသုံးတော့ပဲ ဒီနေရာမှာ form components အသစ်တစ်ခုစခွဲလိုက်ပါပြီ */}
+
+      {/* 
+        အပေါ်က form code တွေကိုမသုံးတော့ပဲ ဒီနေရာမှာ form components အသစ်တစ်ခုစခွဲလိုက်ပါပြီ
+        ဒါကတော့ Child to Parent Data Passing ပေးတာပြတဲ့ sample အတွက်ပဲဖြစ်ပါတယ်
+        ဒီအောက်က Form ထဲကို handleClick ဆိုတဲ့ function တစ်ခုလုံးကို props အနေနဲ့ data passing ပေးလိုက်ပါတယ်
+      */}
       <Form onSubmit={handleClick}/>
       
       {/* Using useState */}
