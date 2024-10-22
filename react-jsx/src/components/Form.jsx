@@ -6,16 +6,17 @@ import { useRef } from "react";
 
 const Form = ({onSubmit}) => {
 
-    // onSubmit က ဒီနေရာမှာ parentLevel ဖြစ်တဲ့ App.jsx က လက်ဆင့်ကမ်းလိုက်တဲ့ function expression တစ်ခုပဲဖြစ်ပါတယ်
+    // onSubmit က ဒီနေရာမှာ Parent Level မှာရှိတဲ့ Function ကြီးတစ်ခုလုံးကို Child Level ကိုပို့ပေးသွားတာပဲဖြစ်ပါတယ်
   
     console.log(onSubmit)
     const inputRef = useRef();
 
     const handleClick = (e) => {
         e.preventDefault();
-        // အဲ့ဒီ onSubmit (handleClick) function ထဲမှာ လက်ရှိ Form.jsx ထဲမှာ ဖမ်းထားသည့် တန်ဖိုးဖြစ်သည့် inputRef တန်ဖိုးကို
+        // အဲ့ဒီ onSubmit (handleClick) function ထဲမှာ လက်ရှိ Form.jsx ထဲမှာ ဖမ်းထားသည့် inputRef တန်ဖိုးကို
         // Parent Level ဖြစ်တဲ့ App.jsx ကိုပြန်ပေးလိုက်တာဖြစ်ပါတယ် ဒါဆိုရင်တော့ Child ထဲမှာရှိတဲ့ တန်ဖိုးတစ်ခုက Parent Level က
         // Function ထဲကိုရောက်သွားပြီး Parent Level ထဲမှာပေါင်းရေးထားတဲ့ Code တွေနဲ့ တွဲဖက်အလုပ်လုပ်နိုင်သွားတာပဲဖြစ်ပါတယ်
+        
         // Main Function တွေက Parent Level မှာရှိပြီး Child Level က တန်ဖိုးကို Parent ရဲ့ Function ထဲထည့်ပေးခြင်းဖြစ်ပါတယ်
         onSubmit(inputRef.current.value);
         inputRef.current.value = null;
