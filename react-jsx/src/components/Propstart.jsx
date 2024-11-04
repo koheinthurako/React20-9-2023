@@ -39,7 +39,7 @@ const Propstart = () => {
     data.isDone = false;
     data.age = 25;
     data.id = Math.random(Date.now()) * 100000000;
-    console.log(data);1
+    console.log(data);
     inputRef.current.value = '';
 
     // setInitialState က Data တွေကိုပြင်တယ်ဆိုပေမယ့် spreadOperator နဲ့တွဲပြီး အောက်ကလို အဟောင်းကောအသစ်ကော data တွေထပ်ထည့်လို့ရတယ်
