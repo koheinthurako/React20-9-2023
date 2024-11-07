@@ -6,7 +6,7 @@ import "./List.css"
 // Props တစ်ခုထက်ပိုလာရင် Object Destructuring နည်းနဲ့လည်းဖမ်းနိုင်ပြီး အောက်ကလိုတိုက်ရိုက် ပြန်သုံးနိုင်ပါတယ်
 
 
-const List = ({name, age, location, isDone}) => {
+const List = ({id, name, age, location, isDone, onChecked}) => {
   
   const style = {
     bgStyle: {
@@ -14,6 +14,11 @@ const List = ({name, age, location, isDone}) => {
       textDecoration: "line-through"
     }
   }
+
+  const handleChange = () => {
+    onChecked(id);
+  }
+
   return (
     // className နဲ့ရေးရင် class binding လို့ခေါ်ပြီး
     <div className={`listContainer ${isDone && "isDone"}`}>
@@ -21,7 +26,7 @@ const List = ({name, age, location, isDone}) => {
       {/* <div style={isDone ? style.bgStyle : null}></div> */}
       
       {/* Attribute Binding => ပုံမှန် input type မှာ checked လို့ရေးလိုက်ရင် အကုန်လုံးအမှန်ဖြစ်သွားပြီး jsx မှာတော့ attribute နဲ့ တွဲပြီး conditional သုံးလို့ရပါတယ်*/}
-        <input type="checkbox" name="" id="" checked={isDone}/>
+        <input onChange={handleChange} type="checkbox" name="" id="" checked={isDone}/>
         {/* <input type="checkbox" name="" id=""/> */}
         <h2>{name}</h2>
         <h2>{age}</h2>
