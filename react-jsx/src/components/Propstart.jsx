@@ -54,12 +54,18 @@ const Propstart = () => {
     // setInitialState();
   }
 
-  const handleEdit = () => {
+  const handleEdit = (id) => {
     console.log("Edit is working");
+    console.log(id);
+    
   }
 
-  const handleDelete = () => {
+  const handleDelete = (id) => {
+    // Delete Function က နည်းနည်းပညာသားပါတယ် မူရင်း တန်ဖိုးဖြစ်တဲ့ initialState တန်ဖိုးတွေကို Filter နဲ့ id တိုက်စစ်လိုက်ပြီး 
+    // လက်ရှိ i.id နဲ့ delete button click လိုက်လို့ပါလာတဲ့ id နဲ့ တိုက်စစ်လို့ မတူတဲ့ဟာတွေကိုပဲ ပြန်ယူပြီး Array အသစ်တစ်ခုအနေနဲ့ ပြန်ရတယ်ဆိုတဲ့ ပုံစံမျိုးဖြစ်သွားပါတယ်
+    // သဘောက delete နှိပ်လိုက်လို့ i.id === id ဖြစ်သွားတဲ့ အတွက် setInitialState မှာ နှိပ်ခံလိုက်ရတဲ့ item ပါမလာတော့ပဲ ပျက်သွားတာပါ
     console.log("Delete is working");
+    setInitialState(initialState.filter(i => i.id !== id ));
   }
 
   return (

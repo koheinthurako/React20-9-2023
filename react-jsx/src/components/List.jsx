@@ -20,11 +20,11 @@ const List = ({id, name, age, location, isDone, onChecked, onEdit, onDelete}) =>
   }
 
   const handleEdit = () => {
-    onEdit();
+    onEdit(id);
   }
 
   const handleDelete = () => {
-    onDelete();
+    onDelete(id);
   }
 
   return (
