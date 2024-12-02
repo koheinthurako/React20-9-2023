@@ -3,12 +3,31 @@
     height: 50px;
     background-color: #b59700;
     color: #fff;
+    padding: 0 21px;
+}
+
+.listContainer .textContainer {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.listContainer .buttonContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.listContainer .buttonContainer button{
+    padding: 3px 10px;
+    border: none;
+    border-radius: 3px;
 }
 
 .isDone {
     background-color: #00b487;
-    text-decoration: line-through;
+    .textContainer {
+        text-decoration: line-through;
+    }
 }

@@ -24,10 +24,9 @@
     text-decoration: line-through;
 }
 
-.listContainer .textContainer {
-    margin-left: 15px;
+/* .listContainer .textContainer {
     display: flex;
-}
+} */
 
 .listContainer .btnContainer > button {
     width: 70px;

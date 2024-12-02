@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 const Form = ({onSubmit}) => {
 
-    // onSubmit က ဒီနေရာမှာ Parent Level မှာရှိတဲ့ Function ကြီးတစ်ခုလုံးကို Child Level ကိုပို့ပေးသွားတာပဲဖြစ်ပါတယ်
+    // onSubmit က ဒီနေရာမှာ Parent Level(App.jsx) မှာရှိတဲ့ Function ကြီးတစ်ခုလုံးကို Child Level ကိုပို့ပေးသွားတာပဲဖြစ်ပါတယ်
   
     console.log(onSubmit)
     const inputRef = useRef();

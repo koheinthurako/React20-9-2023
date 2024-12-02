@@ -49,7 +49,17 @@ const Propstart = () => {
 
   const handleCheck = (id) => {
     console.log(id);
+    console.log("Hello!");
+    setInitialState(initialState.map(i => i.id === id ? {name:i.name, isDone:!i.isDone, id:i.id} : i));
     // setInitialState();
+  }
+
+  const handleEdit = () => {
+    console.log("Edit is working");
+  }
+
+  const handleDelete = () => {
+    console.log("Delete is working");
   }
 
   return (
@@ -64,7 +74,7 @@ const Propstart = () => {
         {/* အပေါ်ကလို List တွေအများကြီးမရေးချင်လို့ useState ကိုသုံးပြီး looping ပတ်ထုတ်ချင်တယ်ဆိုရင် */}
         {/* အပေါ်က data နေရာတွေမှာ useState ထဲက Dynamic Object Array တွေဝင်သွားပြီး အောက်ကလို key နေရာမှာ custom id တွေထည့်ကာ */}
         {/* List ကို loop ပတ်ပြီးတော့ ထုတ်လို့ရသွားမှာပဲဖြစ်ပါတယ် */}
-        {initialState.map(i => <List id={i.id} name={i.name} age={i.age} location={i.location} isDone={i.isDone} onChecked={handleCheck} key={i.id}></List>)}
+        {initialState.map(i => <List id={i.id} name={i.name} age={i.age} location={i.location} isDone={i.isDone} onChecked={handleCheck} key={i.id} onEdit={handleEdit} onDelete={handleDelete}></List>)}
 
         {/* ဒီတစ်ခါတော့ အောက်က button ကိုနှိပ်တာနဲ့ handleClick method ကနေတစ်ဆင့် useState ထဲက initialState မှာရှိတဲ့ တန်ဖိုးတွေအပြင်
           နောက်ထပ်တန်ဖိုးတွေပါ ထပ်ထည့်ခြင်းဖြစ်တယ် နောက်ထပ်တန်ဖိုးတွေထပ်ထည့်ဖို့အတွက် Array ရဲ့ spread operator ကိုသုံးလို့ရတယ်
