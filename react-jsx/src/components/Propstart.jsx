@@ -54,9 +54,15 @@ const Propstart = () => {
     // setInitialState();
   }
 
+  // CRUD Concept ကိုသေချာကြည့်ပါ
   const handleEdit = (id) => {
     console.log("Edit is working");
     console.log(id);
+    const oldData = initialState.find(i => i.id === id);
+    const value = prompt("Enter new title", oldData.name);
+    if(value) {
+      setInitialState(initialState.map(i => i.id === id ? {name:value, isDone:false, id:i.id} : i));
+    }
     
   }
 
