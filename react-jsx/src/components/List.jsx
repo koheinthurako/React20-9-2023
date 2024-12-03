@@ -26,7 +26,9 @@ const List = ({id, name, age, location, isDone, onChecked, onEdit, onDelete}) =>
   // CRUD ဖြစ်တဲ့ Edit/Delete လုပ်တဲ့အပိုင်းတွေဆိုရင်လည်း Child to Parent Data ပြန်ပေးဖို့လိုတယ်
   // Unique ဖြစ်တဲ့ id key တွေနဲ့ ဘယ် Object ကိုဖျက်မှာလဲဆိုတာ လှမ်းဖမ်းရတာဆိုတော့ ကိုယ်ဖျက်မယ့် Item ရဲ့ id ကို Parent ကိုပို့ပေးဖို့လိုတယ်
   // အဲ့တာကြောင့် props နဲ့ function နှစ်ခုချိတ်လိုက်ပြီး Child ထဲက id ကို Parent ကိုလှမ်းပေးရခြင်းဖြစ်သည်
-  // အဓိက Delete အလုပ်လုပ်တဲ့ Function က Parent Level ဖြစ်တဲ့ Propstart.jsx ထဲမှာ ရေးထားတယ်
+  // အဓိက Delete လုပ်တဲ့ Function က Parent Level ဖြစ်တဲ့ Propstart.jsx ထဲမှာ ရေးထားတယ်
+  // အဲ့ Function ကို Parent Level မှာ props အနေနဲ့ List.jsx ထဲကိုပေးလိုက်ပြီး ဒီဘက်မှာ Object Destructuring နဲ့ထပ်ဖမ်းပြီး
+  // ဒီထဲက handleDelete function ကနေ Parent မှာရှိတဲ့ function ကိုယ်စားပြု onDelete ကိုပြန်ခေါ်ထားခြင်းဖြစ်ပါတယ်
   const handleDelete = () => {
     onDelete(id);
   }
