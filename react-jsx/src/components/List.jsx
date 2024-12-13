@@ -1,4 +1,5 @@
 import "./List.css"
+import { FaTrashAlt, FaEdit  } from "react-icons/fa";
 
 // Parent ဖြစ်တဲ့ Propstart ထဲကနေ prop ကတစ်ဆင့် ပေးလိုက်တဲ့ kay value data တွေကို ဒီ(child) ထဲကနေ ဘယ်လိုဖမ်းမလဲဆိုရင်
 // Parameter ထဲမှာ object အနေနဲ့ ဖမ်းပြီးသုံးလို့ရပါတယ် => {props.name}, {props.age}
@@ -48,8 +49,8 @@ const List = ({id, name, age, location, isDone, onChecked, onEdit, onDelete}) =>
           <h2>{location}</h2>
       </div>
       <div className="buttonContainer">
-        <button onClick={handleEdit}>Edit</button>
-        <button onClick={handleDelete}>Delete</button>
+        <button onClick={handleEdit}><FaEdit /> Edit</button>
+        <button onClick={handleDelete}><FaTrashAlt /> Delete</button>
       </div>
     </div>
   )

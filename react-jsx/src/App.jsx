@@ -29,6 +29,7 @@ const App = () => {
      const data = {};
      data.name = name;
      data.isDone = false;
+     // အောက်က UUID ဆိုတဲ့ Library ကိုသုံးပြီး Unique ID ကိုလုပ်ခြင်း
      data.id = id(); // set unique key
  
      setInitialState([...initialState, data]);
