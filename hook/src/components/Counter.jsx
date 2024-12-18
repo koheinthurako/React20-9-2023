@@ -5,9 +5,11 @@ import "./Counter.css";
 // useState, useEffect, useContext
 
 // State တစ်ခု change တိုင်း components တွေကို Rerender ပြန်လုပ်တယ် - အရေးကြီးတယ်
+// ဆိုလိုရင်းက ဒီထဲက State တစ်ခုချိန်းသွားရင် ဒီထဲက Code တွေအကုန်ပြန်အလုပ်လုပ်ပြီး ဒီထဲမှာပါတဲ့ Child တွေကအစ အကုန်ပြန် Render လုပ်ပါတယ်
 
 const Counter = ({data}) => {
     const [count, setCount] = useState(0);
+    // count က useState() ထဲမှာကိုယ်စားပြုသည့် '0' ကို ကိုယ်စားပြုသည်
 
     const handleAdd = (x) => {
         // အောက်က unsafe state change ဖြစ်တယ် ဘာလို့လဲဆိုတော့ looping ပတ်ပြီး setCount မှာ count ကို ၁ တိုးပေမယ့်
