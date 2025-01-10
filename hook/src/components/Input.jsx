@@ -39,6 +39,7 @@ const handleChange = (e) => {
         {/* <input ref={inputRef} type="text" /> */}
 
         {/* value props ကိုသုံးပြီဆိုရင် user input ကိုရဖို့အတွက် onChange ဆိုသည့် props ကိုသုံးပြီး အထဲမှာ function တစ်ခုရေးပေးရသည် */}
+        {/* value ဆိုတဲ့ props သည် ref လိုပဲ input element ရဲ့ တန်ဖိုးကို လှမ်းဖမ်းထားခြင်းဖြစ်သည် သို့သော် ref မဟုတ်ပဲ state ကိုသုံးထားခြင်းဖြစ်သည် */}
         <input value={text} onChange={handleChange} type="text"  />
         <button onClick={handleClick}>Click</button>
         <Counter/> 

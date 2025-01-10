@@ -22,7 +22,7 @@ const Counter = ({data}) => {
         // အောက်က safe state change ဖြစ်တယ် ဘာလို့လဲဆိုတော့ looping ပတ်ပြီး setCount ထဲက preCount ဆိုတာက အပေါ်ကလိုမဟုတ်ပဲ
         // loop တစ်ခါပတ်တိုင်း const preCount = useState(count) ပုံစံဖြစ်သွားပြီး useState ထဲက တန်ဖိုးက loop အလိုက်ပြောင်းလဲနေသည့်အတွက်
         // console.log(preCount) သည် loop ပတ်တိုင်းပြောင်းလဲပြီး မတူညီတဲ့ တန်ဖိုးများထွက်လာသည့်အတွက် safe state ဖြစ်တယ်
-        // အဓိကကတော့ Loop ပတ်ပြီး setCount() ကိုခေါ်တာတူပေမယ့် Callback Function တစ်ခုထည့်လိုက်တာနဲ့ ကွာခြားသွားခြင်းဖြစ်တယ်
+        // အဓိကကတော့ Loop ပတ်ပြီး setCount() ကိုခေါ်တာတူပေမယ့် Callback Function တစ်ခုထည့်လိုက်တာနဲ့ safe state ဖြစ်ပြီးကွာခြားသွားခြင်းဖြစ်တယ်
         // for(let i = 0; i < 10; i++) {
         //     setCount((preCount) => {
         //         // ဒီက preCount ဆိုတာ useState ထဲက count တန်ဖိုးကိုပဲကိုယ်စားပြုသည်
