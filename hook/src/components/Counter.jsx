@@ -1,6 +1,8 @@
 import {useState, memo} from "react";
 import "./Counter.css";
 
+// Connected with new Device
+
 // Basic Hooks
 // useState, useEffect, useContext
 
