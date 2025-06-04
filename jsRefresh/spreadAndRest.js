@@ -82,7 +82,7 @@ console.log(testBoth + " is the testBoth array");
 // Spread ကတော့ Array အသစ်တစ်ခုအနေနဲ့ ပြန်ထွက်လာတယ်
 
 
-
+console.log("Rest Started Here ⬇️⬇️⬇️⬇️")
 
 // Using Default Parameter
 // const test = (x=2, y=3) => {
@@ -101,5 +101,8 @@ const [one, two, ...array] = data;
 console.log(one, two, array);
 
 array[0] = 10;
+// ဒါဆိုရင်တော့ သိသိသာသာ ပြောင်းလဲချက်ကိုမြင်နိုင်ပါတယ်
+// Spread Syntax ကိုသုံးထားတဲ့ array ဆိုတဲ့အထဲက တန်ဖိုး ပြောင်းသွားပေမယ့်
+// မူရင်း data ဆိုတဲ့ထဲက တန်ဖိုးတွေက မပျက်စီးသွားပါဘူး
 console.log(array);
 console.log(data);
