@@ -45,10 +45,27 @@ console.log(first);
 
 const alphabetics = ["a", "b", "c"];
 // ပြီးတော့ first ကို alphabetics array ထဲမှာ ထည့်လိုက်တယ်
-const testBoth = [first+2, ...alphabetics];
+const testBoth = [first, ...alphabetics];
 console.log(testBoth); // [1, "a", "b", "c"]
-console.log(first + " is the Original value");
-console.log(testBoth[0] + " is the first number in testBoth array");
+console.log(first + " is the Original value of numbers array");
+console.log(testBoth[0] + " is also the first number in testBoth array");
+// ဒါဆိုရင်တော့ Array Destructuring ကိုသုံးထားတဲ့ တန်ဖိုး first က ၄ ဖြစ်သွားပြီး testBoth Array ထဲဝင်သွားပါပြီ
+
+
+testBoth[1] = "d";
+// ဒါကတော့ ...alphabetics ဆိုတဲ့ Spread Operator မှတစ်ဆင့် testBoth ရဲ့ Array 1 အခန်းထဲကို တန်ဖိုးပြောင်းထည့်လိုက်တာဖြစ်ပါတယ်
+console.log(testBoth); // [1, "d", "b", "c"]
+// ဒါဆိုရင်တော့ testBoth Array ထဲမှာပဲ တန်ဖိုးပြောင်းသွားပြီး မူရင်းတန်ဖိုးဖြစ်တဲ့ Alphabetics Array ထဲမှ မူရင်းတန်ဖိုးက မပျက်စီးသွားပါဘူး
+console.log(`${testBoth[1]} changed from ${alphabetics[0]} in testBoth array`);
+console.log(alphabetics[0] + " is the first letter in alphabetics array");
+
+alphabetics[0] = "z"; // Update the first element of alphabetics array
+console.log(alphabetics[0] + " is updated in original alphabetics array");
+console.log(alphabetics + " original array after update");
+// ဒါဆိုရင်တော့ alphabetics Array ထဲမှာပဲ တန်ဖိုးပြောင်းသွားပြီး testBoth Array ထဲမှာ မူရင်းတန်ဖိုးက မပျက်စီးသွားပါဘူး
+console.log(testBoth + " is the testBoth array");   
+// ဒါကတော့ Spread Operator နဲ့ Array Destructuring တန်ဖိုးပြောင်းသွားတဲ့ပုံစံကို တွဲဖက်သုံးတဲ့ နမူနာဖြစ်ပါတယ်
+
 
 
 // REST
