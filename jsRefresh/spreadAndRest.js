@@ -32,6 +32,24 @@
 // console.log(three);
 // 
 
+let numbers = [1, 2, 3];
+let [first, second, third ] = numbers;
+// ဒါက Array Destructuring လို့ခေါ်တယ်
+// Destructuring က Array ထဲက တန်ဖိုးတွေကို တစ်ခုချင်းစီထွက်လာတယ်   
+console.log(first, second, third);
+
+// ပြီးတော့ first ကို ၃ ပေါင်းလိုက်တယ်
+first += 3;
+console.log(first);
+// ဒါဆိုရင်တော့ first က 4 ဖြစ်သွားတယ် (မူရင်း first တန်ဖိုးပြောင်းသွားပါပြီ)
+
+const alphabetics = ["a", "b", "c"];
+// ပြီးတော့ first ကို alphabetics array ထဲမှာ ထည့်လိုက်တယ်
+const testBoth = [first+2, ...alphabetics];
+console.log(testBoth); // [1, "a", "b", "c"]
+console.log(first + " is the Original value");
+console.log(testBoth[0] + " is the first number in testBoth array");
+
 
 // REST
 // const rest = (x, y, ...rest) => {
