@@ -8,7 +8,7 @@
 
 // import {id2} from "./module2.js";
 /* export မှာ default မပါတာကို import လှမ်းယူမယ်ဆိုရင် module2.js file တစ်ခုလုံးထဲကို Destructuring လုပ်ပြီး လှမ်းဖမ်းရသည့်အတွက်
-default တုန်းကလို တခြားနာမည်ပေးလို့မရတော့ပဲ key တူမှသာလျှင်ရပါသည် */
+default တုန်းကလို တခြားနာမည်ပေးလို့မရတော့ပဲ key "name, age, gender" ဆိုတာတွေ တူမှသာလျှင်ရပါသည် */
 
 // default မပါပဲ နာမည်ပြောင်းချင်တယ်ဆိုရင်တော့ as keyword ကိုသုံးပါ
 // import {id2 as mySelf2} from "./module2.js";
@@ -16,6 +16,7 @@ default တုန်းကလို တခြားနာမည်ပေးလ�
 
 // "," comma ခံရေးနည်း
 // import mySelf, {id2 as mySelf2} from "./module2.js";
+// ဒီမှာ mySelf က module2.js ထဲက default id ဆိုတာကို ယူလာတာဖြစ်ပြီး id2 ကိုတော့ mySelf2 အနေနဲ့နာမည်ပြောင်း သုံးလိုက်တာဖြစ်ပါတယ် default မပါပဲ နာမည်ပြောင်းပြီး ယူလာတာဖြစ်ပါတယ်
 // console.log(mySelf.name, mySelf.age, mySelf.gender, mySelf2.name, mySelf2.age, mySelf2.gender);
 
 // အကုန်လုံး All Accept လုပ်ချင်တယ်ဆိုရင်တော့
